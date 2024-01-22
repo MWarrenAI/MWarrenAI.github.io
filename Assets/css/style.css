@@ -202,7 +202,7 @@ footer
 
 .Tile
 {
-	Height: 300px;
+	Height: 600px;
 	Width: 1050px;
 	border: solid 1px #9C8D00;
 	display: inline-block;
@@ -220,7 +220,7 @@ footer
 
 .Tile1 
 {
-	Height: 300px;
+	Height: 600px;
 	Width: 100px;
 	margin-top: 12px;
 	margin-bottom: 24px;
