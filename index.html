@@ -104,18 +104,7 @@
 	<br>
 	
 	<div class="container">
-        <form action="mail.php" method="POST">
-		<?php
-			$Msg = "";
-			if(isset($GET['error']))
-			{
-				$Msg = "Please fill in blank fields.";
-			{
-			if(isset($GET['success']))
-			{
-				$Msg = "Your Message has been received.";
-			{
-			?>
+		<form action="mail.php" method="POST">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name">
             <label for="email">Email:</label>
