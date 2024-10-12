@@ -1,37 +1,17 @@
 @import url(fonts.css);
 *
-{
-	margin: 0;
-	padding: 0;
+
+.header_area .main-menu .navbar .navbar-brand{
+	padding: 0 2rem 0 5rem;
 }
-body
-{
-	font-family: sans-serif;
+
+.header_area .main-menu .navbar{
+	padding: 1rem 20rem;
 }
-#nav-bar
-{
-	position: sticky;
-	top: 0;
-	z-index: 0;
-}
-.navbar
-{
-	background-image: linear-gradient(to right, #ff0000, #966e00);
-	padding: 0 !important;
-}
-.navbar-brand img
-{
-	height: 100px;
-	padding-left: 0px;
-}
-.navbar-nav li
-{
-	padding: 0 10px;
-}
-.navbar-nav li a
-{
-	color: #fff :important;
-	font-weight: 600;
-	float: right;
-	text-align: left;
+.header_area .main-menu .nav-item .nav-link{
+	font-family: "Roboto",cursive;
+	text-transform: uppercase;
+	font-weight: 500;
+	padding: 1.7rem;
+	color: black;
 }
