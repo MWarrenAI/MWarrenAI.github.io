@@ -7,3 +7,13 @@ body
 {
 	font-family: sans-serif;
 }
+#nav-bar
+{
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+.navbar
+{
+	background-image: linear-gradient{to right, #c2441d, #5f1782};
+}
