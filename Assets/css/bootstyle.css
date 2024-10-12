@@ -7,7 +7,7 @@
 }
 
 .header_area .main-menu .navbar{
-	padding: 1rem 20rem;
+	padding: 0rem 20rem;
 }
 .header_area .main-menu .nav-item .nav-link{
 	font: normal 500 15px/2px var(--roboto);
