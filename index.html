@@ -3,48 +3,44 @@
 <head>
 <meta charset="UTF-8">
 	<meta name = "viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="Assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="Assets/css/bootstyle.css">
 	<link rel="stylesheet" href="Assets/css/all.min.css">
-	<title>Mark Warren</title>
+	<link rel="stylesheet" href="Assets/css/style.css">
+	<title>Mark Warren's Personal Portfolio Website</title>
 </head>	
 <body>
 	
-	<section id ="nav-bar">
-		<nav class="navbar navbar-expand-lg navbar-light">
-		  <a class ="navbar-brand" href="index.html"><img class="img" src ="Assets/images/Logo/logofinal.png" alt = "Home"/></a>
-		  <div class="container-fluid">
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			  <ul class="navbar-nav ms-auto">
-				<li><a class="nav-link" aria-current="page" href="#about">ABOUT</a></li>
-				<li><a class="nav-link" aria-current="page" href="#projects">PROJECTS</a></li>
-				<li><a class="nav-link" aria-current="page" href="#contact">CONTACT</a></li>
-				</ul>
-			</div>
-		  </div>
+	<header class ="header">
+		<a href="index.html"><img class="logo" src ="Assets/images/Logo/logofinal.png" alt = "Home"/></a>
+		
+		<i class="fa-solid fa-bars" id="menu-icon"></i>
+
+		<nav class = "navbar">
+			<a href="#home">Home</a></li>
+			<a href="#about">About</a></li>
+			<a href="#services">Services</a></li>
+			<a href="#portfolio">Portfolio</a></li>
+			<a href="#contact">Contact</a></li>
 		</nav>
-	</section>
-	<main class="site-main">
-		<section class ="site-banner">
-			<div class = "container">
-				<div class="row">
-					<div class ="col-lg-6 col-md-12">
-						<h1 class="title-text-uppercase">Mark Warren</h1>
-						<h4 class="title-text-uppercase">Software Developer</h4>
-						<div class="site-buttons">
-							<div class="d-flex flex-row flex-wrap">
-								<button type="button" class="btn button primary-button mr-4 title-text-uppercase">Hire me</button>
-								<button type="button" class="btn button secondary-button title-text-uppercase">Get Resume</button>
-							</div>
-						</div>
-					</div>
-					<div class ="col-lg-6">
-						<img src="Assets/images/Me/MeTitle.png" alt="Me with Icons" class="img-fluid">
-					</div>
+	</header>
+
+	<section class="home" id="home">
+		<div class="home-content">
+			<h3>Greetings, I am</h3>			
+			<h1>Mark Warren</h3>
+			<h3>Software Developer</h3>
+			<p>
+				I'm a highly motivated recent graduate with a First Class BSc (Hons) in Artificial Intelligence and Robotics from Staffordshire University. 
+				I'm eager to leverage my diverse skillset in Python, C++, C#, and other languages to excel as a Graduate AI or Programming Engineer. 
+				I thrive in collaborative environments and possess a strong desire to learn and contribute to innovative projects within the software industry.	
+			</p>
+			<img src="Assets/images/Me/MeTitle.png" alt="Me with Icons" class="img-fluid">
+			<div class="socials">
+				<a href="https://www.linkedin.com/in/mwarrenai/"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="https://github.com/MWarrenAI/"><i class="fa-brands fa-github"></i></a>
 			</div>
+			<a href="#" class="btn">Download CV</a>
+			</div>
+			
 		</section>
 	
 	<section id ="about-area">
@@ -70,22 +66,39 @@
 				</div>
 			</div>
 		</div>
-	
+	</section>
 
-	<section id ="projects">
-	<div id="Content">
-	<h3>FYP: Charlotte</h3>
-		<div class="Tile">
-			<a href="https://github.com/MWarrenAI/FYP-Charlotte"> 
-				<div class="Tile1">
-				<img src="Assets/images/Charlotte.jpg" alt= "FYP Charlotte"/>
-					<div class="Description">
-					<br>
-						<p>This Arduino Uno project detects mines moving within a grid with use of C++. The use of mines nowadays are viewed as inhumane by most NATO countries which have condemned their use and production. The project aimed to develop a robot vehicle for the detection of landmines for safe deactivation of mines that could lay dormant underground.</p>
+	<section id ="projects-area">
+		<div class="container">
+			<div class="row text center">
+				<div class="col-12">
+					<div class="project-title">
+						<h1 class="text-uppercase title-h1">Projects</h1>
+						<p class="para">
+							Past and Current projects previews.
+						</p>
 					</div>
 				</div>
-			</a>
+			</div>
 		</div>
+
+		<div class="container caraousel py-lg-5">
+			<div class="owl-carousel owl-theme">
+				<div class="project">
+					<div class="col-lg-8-md-12 project-img">
+						<a href="https://github.com/MWarrenAI/FYP-Charlotte"> 
+						<img src="Assets/images/Charlotte.jpg" alt= "FYP Charlotte" class="img-fluid">
+						</div>
+						<div class="col-lg-8-col-md-12 about-project">
+							<h4 class="text-uppercase">FYP: Charlotte</h4>
+							<p class="para">This Arduino Uno project detects mines moving within a grid with use of C++. The use of mines nowadays are viewed as inhumane by most NATO countries which have condemned their use and production. The project aimed to develop a robot vehicle for the detection of landmines for safe deactivation of mines that could lay dormant underground.</p>
+						</div>
+					</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+
 		
 	<h3>Cat Dog Image Classification</h3>
 		<div class="Tile">
@@ -192,8 +205,7 @@
 	</footer>
 	</div>
 
-	<script src="Assets/js/jquery-3.7.1.min.js"></script>
-	<script src="Assets/js/bootstrap.min.js"></script>
+	<script src="Assets/js/main.js"></script>
 
 </body>
 
