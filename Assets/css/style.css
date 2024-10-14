@@ -233,18 +233,17 @@ body {
 	font-weight: 700;
 	color: var(--color-white);
 	margin-bottom: 1rem;
-	font-size: 20px;
+	font-size: 20px  !important;
 }
 
 .home_title {
 	font-size: clamp(3rem, 8vw, 5rem);
 	margin-bottom: 2rem;
-	font-size: 40px;
-}
+	font-size: 40px !important;
 
 .home__name {
 	color: var(--color-primary);
-	font-size: 40px;
+	font-size: 40px !important;
 }
 
 .home__description {
@@ -307,4 +306,6 @@ body {
 .services__title {
 	font-size: 2rem;
 	margin-bottom: 4rem;
+}
+
 }
