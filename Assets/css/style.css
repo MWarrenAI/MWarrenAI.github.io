@@ -64,11 +64,9 @@ html {
 }
 
 body {
-	min-height: 100vh;
 	font-family: "Raleway", sans-serif;
 	background-color: var(--bg-dark);
 	color: var(--color-text);
-	font-weight: 500;
 	margin-top: 8rem;
 }
 
@@ -237,6 +235,7 @@ body {
 .home_title {
 	font-size: clamp(3rem, 8vw, 5rem);
 	margin-bottom: 2rem;
+}
 
 .home__name {
 	color: var(--color-primary);
@@ -296,7 +295,7 @@ body {
 .services__icon {
 	display: block;
 	margin-bottom: 1rem;
-	font-size: 34px;
+	font-size: 3rem;
 	color: var(--color-white);
 }
 
