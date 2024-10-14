@@ -208,8 +208,18 @@ body {
 }
 
 .home__wrapper {
+	max-width: 100%;
+	margin-left: 0px;
+	margin-top: 20px;
+	order: -1;
 	min-height: calc(100vh - 8rem);
 	padding: 50px 0px;
+	display: flex;
+	align-items: center;
+}
+
+.home__body {
+	flex: 1;
 }
 
 .home__subtitle {
@@ -221,23 +231,22 @@ body {
 }
 
 .home_title {
-	font-size: 40px;
+	font-size: 32px;
 	margin: 0;
 }
 
 .home__name {
-	font-size: 40px;
+	font-size: 32px;
 	color: var(--color-primary);
 }
 
-.home__description {
-	margin-top: 40px;
+.home__image {
+	max-width: 40%;
+	margin-left: 40px;
 }
 
-.home__image {
-	float: right;
-	margin-left: 20px;
-	justify-self: center;
+.home__description {
+	margin-top: 32px;
 }
 
 .social {
