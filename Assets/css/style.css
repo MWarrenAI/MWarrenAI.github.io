@@ -200,6 +200,7 @@ body {
 }
 
 .home__wrapper {
+	margin-top: 500px; 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
@@ -211,7 +212,6 @@ body {
 
 .home__body {
 	text-align: center;
-	margin-top: 500px; 
 	grid-column: 1 / 2;
 }
 
