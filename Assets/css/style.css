@@ -232,20 +232,18 @@ body {
 	font-weight: 700;
 	color: var(--color-white);
 	margin-bottom: 1rem;
-	font-size: 30px  !important;
 }
 
 .home_title {
 	font-size: clamp(3rem, 8vw, 5rem);
 	margin-bottom: 2rem;
-	font-size: 40px !important;
 
 .home__name {
 	color: var(--color-primary);
-	font-size: 40px !important;
 }
 
 .home__description {
+	margin-top: 1rem;
 	margin-bottom: 3rem;
 }
 
