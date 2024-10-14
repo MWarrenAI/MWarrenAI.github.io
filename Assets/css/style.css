@@ -240,18 +240,20 @@ body {
 
 .home__wrapper {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	gap: 40px;
 	align-items: center;
 }
 
 .home__image-wrapper {
+	order: -1;
 	justify-content: center;
-	grid-column: 2 / 3;
+	grid-column: 1 / -1;
+	display: flex;
 }
 
 .home__body {
-	grid-column: 1 / 2;
+	grid-column: 1 / -1;
 }
 
 .home__content {
