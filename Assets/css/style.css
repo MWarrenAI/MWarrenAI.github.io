@@ -117,7 +117,7 @@ body {
 }
 
 .btn i {
-	font-size: 2rem;
+	font-size: 1rem;
 }
 
 .btn--primary {
@@ -161,7 +161,6 @@ body {
 .nav__link {
 	color: var(--color-white);
 	font-size: 16px;
-	font-weight: bold;
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -222,22 +221,24 @@ body {
 }
 
 .home__subtitle {
+	font-size: 20px;
 	display: block;
 	color: var(--color-white);
 	margin-bottom: 1rem;
 }
 
 .home_title {
-	font-size: clamp(4rem, 8vw, 5rem);
+	font-size: 40px;
 	margin-bottom: 2rem;
 }
 
 .home__name {
+	font-size: 40px;
 	color: var(--color-primary);
 }
 
 .home__description {
-	margin-top: 1rem;
+	margin-top: 4rem;
 	margin-bottom: 4rem;
 }
 
