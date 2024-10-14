@@ -117,11 +117,11 @@ body {
 }
 
 .btn i {
-	font-size: 1rem;
+	font-size: 12px;
 }
 
 .btn--primary {
-	margin-top: 4rem;
+	margin-top: 4px;
 	background-color: var(--color-primary);
 	color: var(--color-white);
 }
@@ -155,7 +155,7 @@ body {
 .nav__list {
 	display: flex;
 	align-items: center;
-	column-gap: 4rem;
+	column-gap: 4px;
 }
 
 .nav__link {
@@ -191,13 +191,12 @@ body {
 
 	.nav__list {
 		flex-direction: column;
-		row-gap: 4rem;
+		row-gap: 4px;
 	}
 
 	.nav__open,
 	.nav__close {
 		display: block;
-		font-size: 4rem;
 		color: var(--color-white);
 		transform: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 		cursor: pointer;
@@ -205,8 +204,6 @@ body {
 
 	.nav__close {
 		position: absolute;
-		top: 3rem;
-		right: 3rem;
 	}
 
 	.nav__open:hover,
@@ -238,8 +235,8 @@ body {
 }
 
 .home__description {
-	margin-top: 4rem;
-	margin-bottom: 4rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .home__image {
@@ -247,7 +244,7 @@ body {
 }
 
 .social {
-	margin: 4rem 0;
+	margin: 10px 0px;
 }
 
 .social__list {
