@@ -150,7 +150,6 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	font-size: 16px;
 }
 
 .nav__list {
@@ -161,6 +160,7 @@ body {
 
 .nav__link {
 	color: var(--color-white);
+	font-size: 16px;
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
