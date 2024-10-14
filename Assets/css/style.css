@@ -202,7 +202,7 @@ body {
 	.nav__open,
 	.nav__close {
 		display: block;
-		font-size: 3rem;
+		font-size: 4rem;
 		color: var(--color-white);
 		transform: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 		cursor: pointer;
@@ -274,7 +274,7 @@ body {
 
 .social__link {
 	color: var(--color-white);
-	font-size: 2rem;
+	font-size: 4rem;
 }
 
 .services__card {
@@ -295,13 +295,11 @@ body {
 .services__icon {
 	display: block;
 	margin-bottom: 1rem;
-	font-size: 3rem;
+	font-size: 4rem;
 	color: var(--color-white);
 }
 
 .services__title {
 	font-size: 2rem;
 	margin-bottom: 4rem;
-}
-
 }
