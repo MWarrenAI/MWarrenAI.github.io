@@ -400,6 +400,6 @@ footer {
 	}
 	
 	.home__image-wrapper {
-		order: 1;
+		order: -1;
 	}
 }
