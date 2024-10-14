@@ -247,11 +247,11 @@ body {
 
 .home__image-wrapper {
 	justify-content: center;
-	grid-column: 1 / 2;
+	grid-column: 2 / 3;
 }
 
 .home__body {
-	grid-column: 2 / 3;
+	grid-column: 1 / 2;
 }
 
 .home__content {
