@@ -357,11 +357,6 @@ footer {
     padding-top: 60px;
 }
 
-.about {
-    margin-top: 60px;
-    padding-top: 60px;
-}
-
 .about__wrapper {
     display: flex;
     align-items: flex-start;
@@ -371,7 +366,7 @@ footer {
 .about__image-wrapper {
     flex: 0 0 auto;
     margin-right: 40px;
-    margin-left: -60px; 
+	margin-left: 60px;
 }
 
 .about__image {
@@ -471,6 +466,10 @@ footer {
 	.about__wrapper {
         flex-direction: column;
     }
+
+	.about_image {
+		max-width: 100%;
+	}
 
     .about__image-wrapper {
         order: -1;
