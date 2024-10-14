@@ -240,15 +240,19 @@ body {
 .home__wrapper {
 	display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .home__body {
 	max-width: 800px;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
+}
+
+.home__content {
+	overflow: hidden;
 }
 
 .home__subtitle {
@@ -257,11 +261,13 @@ body {
 	display: block;
 	color: var(--color-white);
 	margin-bottom: 12px;
+	text-align: left;
 }
 
 .home_title {
 	font-size: 32px;
 	margin: 0;
+	text-align: left;
 }
 
 .home__name {
@@ -277,6 +283,7 @@ body {
 
 .home__description {
 	margin-top: 32px;
+	text-align: left;
 }
 
 .social {
