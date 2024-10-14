@@ -25,6 +25,10 @@ ul {
 	padding: 0;
 }
 
+p {
+	margin-top: 10px;
+}
+
 h1,
 h2,
 h3,
@@ -217,7 +221,6 @@ body {
 }
 
 .home__subtitle {
-	font-size: 40px;
 	display: block;
 	color: var(--color-white);
 	margin-bottom: 12px;
@@ -229,7 +232,6 @@ body {
 }
 
 .home__name {
-	font-size: 40px;
 	color: var(--color-primary);
 }
 
