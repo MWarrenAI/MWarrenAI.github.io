@@ -200,7 +200,6 @@ body {
 }
 
 .home__wrapper {
-	margin-top: 500px; 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
@@ -233,6 +232,7 @@ body {
 }
 
 .home__content {
+	margin-top: 500px; 
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
