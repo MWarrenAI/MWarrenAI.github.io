@@ -67,7 +67,7 @@ body {
 	font-family: "Raleway", sans-serif;
 	background-color: var(--bg-dark);
 	color: var(--color-text);
-	margin-top: 8rem;
+	margin-top: 20px;
 }
 
 .grid {
@@ -75,7 +75,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	grid-template-columns: 100%;
-	gap: 2rem;
+	gap: 20px;
 }
 
 .container {
@@ -85,12 +85,12 @@ body {
 }
 
 .section{
-	padding: 4rem 0 8rem 0;
+	padding: 20 0 10px 0;
 }
 
 .section__header {
 	text-align: center;
-	margin-bottom: 8rem;
+	margin-bottom: 40px;
 }
 
 .section__title {
@@ -108,19 +108,18 @@ body {
 .btn {
 	display: inline;
 	align-items: center;
-	padding: 20px 0px;
-	border-radius: 0.5px;
+	padding: 10px 0px;
+	border-radius: 20px;
 	font-weight: 600;
-	font-size: 12px;
+	font-size: 18px;
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .btn i {
-	font-size: 14px;
+	font-size: 18px;
 }
 
 .btn--primary {
-	margin-top: 4px;
 	background-color: var(--color-primary);
 	color: var(--color-white);
 }
@@ -135,7 +134,7 @@ body {
 	left: 0;
 	right: 0;
 	background-color: var(--bg-dark);
-	min-height: 8rem;
+	min-height: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -190,7 +189,7 @@ body {
 
 	.nav__list {
 		flex-direction: column;
-		row-gap: 4px;
+		row-gap: 20px;
 	}
 
 	.nav__open,
@@ -213,19 +212,19 @@ body {
 
 .home__wrapper {
 	min-height: calc(100vh - 8rem);
-	padding: 5rem 0;
+	padding: 28px 0px;
 }
 
 .home__subtitle {
 	font-size: 20px;
 	display: block;
 	color: var(--color-white);
-	margin-bottom: 1rem;
+	margin-bottom: 12px;
 }
 
 .home_title {
 	font-size: 40px;
-	margin-bottom: 2rem;
+	margin-bottom: 16px;
 }
 
 .home__name {
@@ -266,14 +265,14 @@ body {
 
 .social__link {
 	color: var(--color-white);
-	font-size: 4rem;
+	font-size: 20px;
 }
 
 .services__card {
 	justify-self: center;
 	background-color: var(--bg-light);
 	box-shadow: var(--shadow);
-	padding: 7rem 2rem;
+	padding: 32 16px;
 	width: 100%;
 	max-width: 300px;
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -286,12 +285,12 @@ body {
 
 .services__icon {
 	display: block;
-	margin-bottom: 1rem;
+	margin-bottom: 10px;
 	font-size: 4rem;
 	color: var(--color-white);
 }
 
 .services__title {
-	font-size: 2rem;
-	margin-bottom: 4rem;
+	font-size: 14px;
+	margin-bottom: 20px; 
 }
