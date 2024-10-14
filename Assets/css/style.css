@@ -171,6 +171,7 @@ body {
 .nav__link {
 	color: var(--color-white);
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+	font-size: 14px;
 }
 
 .nav__link:hover {
@@ -234,6 +235,7 @@ body {
 	font-weight: 700;
 	color: var(--color-white);
 	margin-bottom: 1rem;
+	font-size: 20px;
 }
 
 .home_title {
