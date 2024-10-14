@@ -386,13 +386,6 @@ footer {
     overflow: hidden;
 }
 
-.about__subtitle {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-white);
-    margin-bottom: 12px;
-}
-
 .about__title {
     font-size: 40px;
     margin: 0;
@@ -401,15 +394,22 @@ footer {
     color: var(--color-white);
 }
 
+.about__subtitle {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
 .about__description {
-    margin-top: 32px;
     font-size: 16px;
     line-height: 1.6;
+    margin-bottom: 30px;
 }
 
 .about .btn {
     align-self: flex-start;
-    margin-top: 30px;
 }
 
 
