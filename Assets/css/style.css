@@ -150,7 +150,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	font-size: 3rem;
+	font-size: 16px;
 }
 
 .nav__list {
