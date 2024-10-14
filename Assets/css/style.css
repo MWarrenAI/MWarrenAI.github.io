@@ -282,10 +282,9 @@ body {
 
 .home__image {
 	grid-column: 2 / 3;
-	justify-self: end;
+	justify-self: center;
 	max-width: 100%;
 	border-radius:8px;
-	height: auto;
 }
 
 .home__description {
