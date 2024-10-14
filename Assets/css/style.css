@@ -235,6 +235,8 @@ body {
 }
 
 .home__image {
+	float: right;
+	margin-left: 20px;
 	justify-self: center;
 }
 
