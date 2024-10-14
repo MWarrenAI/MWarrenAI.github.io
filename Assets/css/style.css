@@ -361,21 +361,51 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    align-items: center;
+	align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about__image-wrapper {
+    grid-column: 1 / 2;
+    justify-content: center;
+    display: flex;
+}
+
+.about__image {
+    max-width: 100%;
+    border-radius: 8px;
 }
 
 .about__content {
+    grid-column: 2 / 3;
     text-align: left;
+}
+
+.about__subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 12px;
 }
 
 .about__title {
     font-size: 32px;
     margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-white);
 }
 
 .about__description {
-    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 16px;
     line-height: 1.6;
+}
+
+.about .btn {
+    margin-top: 30px;
 }
 
 
