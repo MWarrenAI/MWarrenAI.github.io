@@ -81,7 +81,6 @@ body {
 .container {
 	width: 90%;
 	max-width: 1100px;
-	margin: auto;
 }
 
 .section{
@@ -94,12 +93,10 @@ body {
 }
 
 .section__title {
-	margin: auto;
 	max-width: 400px;
 }
 
 .section__description {
-	margin: auto;
 	max-width: 400px;
 	font-size: 12px;
 }
