@@ -239,10 +239,12 @@ body {
 .home_title {
 	font-size: clamp(3rem, 8vw, 5rem);
 	margin-bottom: 2rem;
+	font-size: 40px;
 }
 
 .home__name {
 	color: var(--color-primary);
+	font-size: 40px;
 }
 
 .home__description {
