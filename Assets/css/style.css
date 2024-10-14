@@ -236,17 +236,29 @@ body {
 	.nav__close:hover {
 		color: var(--color-primary);
 	}
+
+	.home__wrapper {
+		grid-template-columns: 1fr;
+	}
+	
+	.home__image-wrapper,
+	.home__body {
+		grid-column: 1 / -1;
+	}
+	
+	.home__image-wrapper {
+		order: -1;
+	}
 }
 
 .home__wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	gap: 40px;
 	align-items: center;
 }
 
 .home__image-wrapper {
-	order: -1;
+	grid-column: 2 / 3;
 	justify-content: center;
 }
 
@@ -284,7 +296,6 @@ body {
 	justify-self: center;
 	max-width: 100%;
 	border-radius:8px;
-	grid-column: 2 / 3;
 }
 
 .home__description {
