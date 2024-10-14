@@ -6,31 +6,13 @@
 	--color-primary-dark: #772fed;
 	--color-text: #a2acbb;
 	--color-white: #fff;
-	--shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.1);
-
-	--ff-main: "Raleway", sans-serif;
-
-	--fw-regular: 400;
-	--fw-medium: 500;
-	--fw-semibold: 600;
-	--fw-bold: 700;
-
-	--fs-sm: 1.4 rem;
-	--fs-md: 1.6 rem;
-	--fs-lg: 2rem;
-	--fs-xl: 2.4rem;
-	--fs-xxl: clamp(var(--fs-lg), 5vw, 3.5rem);
-	--fs-heading: clamp(3rem, 8vw, 5rem);
-
-	--transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-
-	--header-height: 8rem;
 }
 
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
+	font-family: "Raleway", sans-serif;
 }
 
 body,
@@ -49,7 +31,7 @@ h2,
 h3,
 h4 {
 	color: var(--color-white);
-	font-size: var(--fw-bold);
+	font-weight: 600;
 }
 
 ul {
@@ -154,17 +136,21 @@ body {
 }
 
 .l-header {
+	height: 100vh;
+	width: 300px;
+	background-color: var(--bg-dark);
+	overflow: auto;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: var(--bg-dark);
-	min-height: var(--header-height);
+	bottom: 0;
+	padding: 15px 30px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 999;
-	transition: var(--transition);
+	z-index: 99;
+	box-shadow: 0 0 5px var(--color-primary);
 }
 
 .nav {
@@ -176,9 +162,10 @@ body {
 }
 
 .nav__brand {
-	font-size: var(--fs-xl);
-	font-weight: var(--fw-bold);
-	color: var(--color-white);
+	width: 150px;
+	border-radius: 50%;
+	border: 10px solid var(--bg-dark);
+	box-shadow: 0 15px 100px 1px var(--color-primary);
 }
 
 .nav__list {
