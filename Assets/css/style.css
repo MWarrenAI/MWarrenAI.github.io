@@ -150,13 +150,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	font-size: 20px;
-}
-
-.nav__brand {
-	font-size: 2.4rem;
-	font-weight: 700;
-	color: var(--color-white);
+	font-size: 4rem;
 }
 
 .nav__list {
