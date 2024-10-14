@@ -351,6 +351,33 @@ footer {
 	text-align: center;
 }
 
+.about {
+    margin-top: 100px;
+    padding-top: 100px;
+}
+
+.about__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about__content {
+    text-align: left;
+}
+
+.about__title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about__description {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+
 @media screen and (max-width: 768px) {
 	.nav__menu {
 		position: fixed;
@@ -402,4 +429,8 @@ footer {
 	.home__image-wrapper {
 		order: -1;
 	}
+
+	.about__wrapper {
+        grid-template-columns: 1fr;
+    }
 }
