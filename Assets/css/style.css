@@ -247,7 +247,7 @@ body {
 
 .home__image-wrapper {
 	justify-content: center;
-	order: -1;
+	grid-column: 2 / 3;
 }
 
 .home__body {
@@ -281,7 +281,6 @@ body {
 }
 
 .home__image {
-	grid-column: 2 / 3;
 	justify-self: center;
 	max-width: 100%;
 	border-radius:8px;
