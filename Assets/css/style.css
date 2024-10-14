@@ -256,8 +256,8 @@ body {
 
 .home__subtitle {
 	width: 100%;
-	font-size: 18px;
-	font-weight: 600;
+	font-size: 40px;
+	font-weight: 700;
 	display: block;
 	color: var(--color-white);
 	margin-bottom: 12px;
@@ -267,17 +267,19 @@ body {
 
 .home_title {
 	width: 100%;
-	font-size: 32px;
+	font-size: 40px;
 	margin: 0;
 	text-align: left;
 	align-self: flex-start;
+	font-weight: 700;
 }
 
 .home__name {
 	width: 100%;
-	font-size: 32px;
+	font-size: 40px;
 	color: var(--color-primary);
 	text-align: left;
+	font-weight: 700;
 }
 
 .home__image {
