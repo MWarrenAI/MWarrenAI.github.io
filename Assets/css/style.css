@@ -192,8 +192,7 @@ body {
 		transition: opacity 0.3s ease-in-out;
 		transform: scale(0);
 		opacity: 0;
-		font-weight: bold;
-		font-size: 16rem;
+		font-size: 20px;
 	}
 
 	.nav__list {
