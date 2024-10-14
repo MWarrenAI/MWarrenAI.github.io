@@ -108,7 +108,7 @@ body {
 .btn {
 	display: inline;
 	align-items: center;
-	padding: 40px 0px;
+	padding: 80px 0px;
 	border-radius: 20px;
 	font-weight: 600;
 	font-size: 18px;
@@ -242,7 +242,8 @@ body {
 }
 
 .social {
-	margin: 10px 0px;
+	margin: 100px 0px;
+	font-size: 40px;
 }
 
 .social__list {
@@ -265,7 +266,6 @@ body {
 
 .social__link {
 	color: var(--color-white);
-	font-size: 100px;
 }
 
 .services__card {
