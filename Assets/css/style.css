@@ -11,7 +11,13 @@
 *,
 *::before,
 *::after {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	scroll-behavior: smooth;
 	font-family: "Raleway", sans-serif;
 }
 
@@ -67,13 +73,8 @@ html {
 }
 
 body {
-	min-height: 100vh;
-	font-family: var(--ff-main);
 	background-color: var(--bg-dark);
 	color: var(--color-text);
-	font-size: var(--fs-md);
-	font-weight: var(--fw-medium);
-	margin-top: var(--header-height);
 }
 
 .grid {
@@ -136,21 +137,18 @@ body {
 }
 
 .l-header {
-	height: 100vh;
-	width: 300px;
-	background-color: var(--bg-dark);
-	overflow: auto;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	padding: 15px 30px;
+	width: 100%;
+	padding: 2rem 9%;
+	background-color: var(--bg-dark);
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	z-index: 99;
-	box-shadow: 0 0 5px var(--color-primary);
+	align-items: center;
+	z-index: 100;
 }
 
 .nav {
@@ -162,10 +160,7 @@ body {
 }
 
 .nav__brand {
-	width: 150px;
-	border-radius: 50%;
-	border: 10px solid var(--bg-dark);
-	box-shadow: 0 15px 100px 1px var(--color-primary);
+	margin-left: 4rem;
 }
 
 .nav__list {
