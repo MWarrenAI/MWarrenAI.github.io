@@ -271,7 +271,8 @@ body {
 
 .home__image {
 	max-width: 300px;
-	margin: 40px 0px;
+	margin: 0 0 20px 20px;
+	float: right;
 }
 
 .home__description {
