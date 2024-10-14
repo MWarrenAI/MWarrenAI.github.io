@@ -204,6 +204,9 @@ body {
 	grid-template-columns: 1fr 1fr;
 	gap: 40px;
 	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .home__body {
@@ -213,6 +216,7 @@ body {
 .home__image-wrapper {
 	grid-column: 2 / 3;
 	justify-content: center;
+	display: flex;
 }
 
 .home__image {
@@ -396,6 +400,6 @@ footer {
 	}
 	
 	.home__image-wrapper {
-		order: -1;
+		order: 1;
 	}
 }
