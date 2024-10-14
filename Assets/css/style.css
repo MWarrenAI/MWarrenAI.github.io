@@ -150,6 +150,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	font-size: 20px;
 }
 
 .nav__brand {
@@ -192,7 +193,6 @@ body {
 		transition: opacity 0.3s ease-in-out;
 		transform: scale(0);
 		opacity: 0;
-		font-size: 20px;
 	}
 
 	.nav__list {
