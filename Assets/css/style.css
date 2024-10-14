@@ -215,6 +215,10 @@ body {
 	grid-column: 1 / 2;
 }
 
+.content-wrapper {
+	padding-top: 80px;
+}
+
 .home__image-wrapper {
 	grid-column: 2 / 3;
 	justify-content: center;
@@ -392,6 +396,7 @@ footer {
 	}
 
 	.home__wrapper {
+		margin-top: 100px;
 		grid-template-columns: 1fr;
 	}
 	
