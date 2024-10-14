@@ -237,18 +237,20 @@ body {
 	}
 }
 
-.home__wrapper {
+.home__wrapper * {
 	display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: left;
+    text-align: left !important;
+	width: 100%;
 }
 
 .home__body {
-	max-width: 800px;
+	max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+	width: 100%;
 }
 
 .home__content {
@@ -262,22 +264,24 @@ body {
 	color: var(--color-white);
 	margin-bottom: 12px;
 	text-align: left;
+	align-self: flex-start;
 }
 
 .home_title {
 	font-size: 32px;
 	margin: 0;
 	text-align: left;
+	align-self: flex-start;
 }
 
 .home__name {
 	font-size: 32px;
 	color: var(--color-primary);
+	text-align: left;
 }
 
 .home__image {
-	max-width: 300px;
-	margin: 0 0 20px 20px;
+	margin-top: 32px;
 	float: right;
 }
 
@@ -288,7 +292,7 @@ body {
 
 .social {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
     width: 100%;
 }
 
