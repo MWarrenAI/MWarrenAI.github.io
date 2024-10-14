@@ -358,7 +358,7 @@ footer {
 }
 
 .about {
-    margin-top: 100px;
+    margin-top: 200px !important;
     padding-top: 60px;
 }
 
