@@ -19,6 +19,18 @@ window.addEventListener('scroll', () => {
 })
 
 document.addEventListener('DOMContentLoaded', function() {
+    const homeLink = document.querySelector('a[data-section="home"]');
+    
+    homeLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     const successModal = document.getElementById('successModal');
     const closeModal = document.querySelector('.close');
