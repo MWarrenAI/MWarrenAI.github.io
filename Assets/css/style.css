@@ -699,13 +699,22 @@ textarea.form__input {
     }
 	
 	.nav__open,
-    .nav__close {
-        display: none;
-    }
+	.nav__close {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-text);
+	}
 	
 	.nav__open:hover,
 	.nav__close:hover {
 		color: var(--color-primary);
+	}
+
+	.nav__close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
 	}
 
 	.content-wrapper {
@@ -780,9 +789,42 @@ textarea.form__input {
     }
 
 	@media screen and (min-width: 768px) {
-		.content-wrapper.menu-open {
-			margin-left: 0;
-		}
+	.content-wrapper.menu-open {
+		margin-left: 80%;
+	}
+	
+	.content-wrapper.menu-open {
+	margin-left: 0;
+	}
+	.nav__menu {
+		position: static;
+		width: auto;
+		height: auto;
+		background-color: transparent;
+		padding: 0;
+		overflow-y: visible;
+	}
+
+	.nav__list {
+		flex-direction: row;
+		column-gap: 30px;
+	}
+
+	.nav__item {
+		width: auto;
+	}
+
+	.nav__open,
+	.nav__close {
+		display: none;
+	}
+	
+	.content-wrapper {
+		transition: margin-left 0.5s;
+	}
+	
+	.content-wrapper.menu-open {
+		margin-left: 80%;
 	}
 
 	@media screen and (max-width: 992px) {

@@ -1,38 +1,30 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const navMenu = document.querySelector('.nav__menu');
-    const navOpen = document.querySelector('.nav__open');
-    const navClose = document.querySelector('.nav__close');
+const navMenu = document.getElementById('nav-menu')
+const navOpen = document.getElementById('nav-open')
+const navClose = document.getElementById('nav-close')
+const navItems = document.querySelectorAll('.nav__item')
+const contentWrapper = document.querySelector('.content-wrapper')
 
-    // Function to show the menu
-    const showMenu = () => {
-        navMenu.classList.add('show-menu');
-    }
+navOpen.addEventListener('click', () => {
+    navMenu.classList.add('nav__menu--open')
+    contentWrapper.classList.add('menu-open')
+})
 
-    // Function to hide the menu
-    const hideMenu = () => {
-        navMenu.classList.remove('show-menu');
-    }
+navClose.addEventListener('click', () => {
+    navMenu.classList.remove('nav__menu--open')
+    contentWrapper.classList.remove('menu-open')
+})
 
-    // Event listener for opening the menu
-    if (navOpen) {
-        navOpen.addEventListener('click', showMenu);
-    }
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navMenu.classList.remove('nav__menu--open')
+        contentWrapper.classList.remove('menu-open')
+    })
+})
 
-    // Event listener for closing the menu
-    if (navClose) {
-        navClose.addEventListener('click', hideMenu);
-    }
-
-    // Close menu when clicking on a nav link
-    const navLinks = document.querySelectorAll('.nav__link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', hideMenu);
-    });
-});
 const header = document.getElementById('l-header')
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50){
-        header.classList.add('l-header--scroll')        
+    if (window.scrollY > 100) {
+        header.classList.add('l-header--scroll')
     } else {
         header.classList.remove('l-header--scroll')
     }
