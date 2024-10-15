@@ -105,9 +105,8 @@ body {
 }
 
 .section {
-	padding-top: 20px;
-    padding-bottom: 20px;
-	min-height: auto;
+	padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .section__header {
@@ -166,7 +165,7 @@ body {
 }
 
 .l-main {
-	padding-top: 80;
+	padding-top: 60px;
 }
 
 .l-header {
@@ -228,13 +227,9 @@ body {
 
 .home-section {
 	padding-top: 0;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 60px);
     display: flex;
     align-items: center;
-}
-
-.home__wrapper {
-	margin-top: -80px;
 }
 
 .home__body {
@@ -327,7 +322,7 @@ body {
 .services-section,
 .portfolio-section,
 .contact-section {
-	padding-top: 60px;
+	padding-top: 40px;
 	scroll-margin-top: 80px;
 }
 
@@ -612,8 +607,12 @@ textarea.form__input {
 
 @media screen and (max-width: 768px) {
 	.l-main {
-		padding-top: -60px;
+		padding-top: 40px;
 	}
+
+	.home-section {
+        min-height: calc(100vh - 40px);
+    }
 
 	.nav__menu .nav__item a:hover,
     .nav__menu .nav__item a:focus {
@@ -688,8 +687,8 @@ textarea.form__input {
     }
 
     .section {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
 	.about__wrapper {
@@ -724,7 +723,8 @@ textarea.form__input {
     .services-section,
     .portfolio-section,
     .contact-section {
-        padding-top: 40px; 
+        padding-top: 30px;
+		scroll-margin-top: 40px; 
     }
 
 	@media screen and (max-width: 992px) {
