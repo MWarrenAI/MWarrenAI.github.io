@@ -577,6 +577,24 @@ textarea.form__input {
     cursor: pointer;
 }
 
+#Ender {
+    padding-bottom: 20px; /* Adds space below the entire footer */
+}
+
+.foottext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foottext p {
+    margin-bottom: 5px; /* Adds a small space between paragraphs */
+}
+
+.icons-credit {
+    margin-top: 10px; /* Adds extra space above the icons credit */
+}
+
 
 @media screen and (max-width: 768px) {
 	.l-main {
