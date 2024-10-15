@@ -38,6 +38,7 @@ a {
 
 .section {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	scroll-margin-top: 80px; 
     padding-top: 80px; 
     min-height: 100vh;
@@ -47,6 +48,11 @@ a {
     flex-direction: column;
     justify-content: center;
     scroll-margin-top: 60px;
+=======
+	padding-top: 20px;
+    padding-bottom: 20px;
+	min-height: auto;
+>>>>>>> parent of 9210793 (Update style.css)
 =======
 	padding-top: 20px;
     padding-bottom: 20px;
@@ -111,6 +117,7 @@ a {
 
 .l-main {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -118,6 +125,9 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+=======
+	padding-top: 80;
+>>>>>>> parent of 9210793 (Update style.css)
 =======
 	padding-top: 80;
 >>>>>>> parent of 9210793 (Update style.css)
@@ -188,6 +198,10 @@ a {
     display: flex;
     align-items: center;
 >>>>>>> parent of 9210793 (Update style.css)
+}
+
+.home__wrapper {
+	margin-top: -80px;
 }
 
 .home__wrapper {
@@ -283,7 +297,11 @@ a {
 .portfolio-section,
 .contact-section {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	padding-top: 100px;
+=======
+	padding-top: 60px;
+>>>>>>> parent of 9210793 (Update style.css)
 =======
 	padding-top: 60px;
 >>>>>>> parent of 9210793 (Update style.css)
@@ -620,6 +638,7 @@ a {
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     .l-header {
         height: 80px;
     }
@@ -627,6 +646,8 @@ a {
     .nav__brand {
         height: 60px;
 =======
+=======
+>>>>>>> parent of 9210793 (Update style.css)
 	.l-main {
 		padding-top: -60px;
 	}
