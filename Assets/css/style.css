@@ -195,10 +195,12 @@ body {
 .nav__item a {
     color: var(--color-text);
     transition: color 0.3s ease;
+    text-decoration: none; /* Ensure no underline */
 }
 
-.nav__item a:hover {
-    color: var(--color-white);
+.nav__item a:hover,
+.nav__item a:focus {
+    color: var(--color-white) !important; /* Use !important to override any conflicting styles */
 }
 
 .nav__open,
@@ -575,7 +577,7 @@ textarea.form__input {
 }
 
 #Ender {
-    padding-bottom: 20px 0; /* Adds space below the entire footer */
+    padding-bottom: 20px 0; 
 }
 
 .foottext {
@@ -585,11 +587,11 @@ textarea.form__input {
 }
 
 .foottext p {
-    margin-bottom: 5px; /* Adds a small space between paragraphs */
+    margin-bottom: 5px; 
 }
 
 .icons-credit {
-    margin-top: 10px; /* Adds extra space above the icons credit */
+    margin-top: 10px; 
 }
 
 
@@ -597,6 +599,11 @@ textarea.form__input {
 	.l-main {
 		padding-top: 60px;
 	}
+
+	.nav__menu .nav__item a:hover,
+    .nav__menu .nav__item a:focus {
+        color: var(--color-white) !important;
+    }
 
 	.nav__menu {
 		position: fixed;
