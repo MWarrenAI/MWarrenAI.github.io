@@ -237,8 +237,10 @@ body {
 }
 
 .home-section {
-	padding-top: 80px !important;
+	padding-top: 40px !important;
     min-height: calc(100vh - 80px);
+	display: flex;
+	align-items: center;
 }
 
 .home__wrapper {
@@ -681,8 +683,8 @@ textarea.form__input {
 	}
 
 	.home__wrapper {
-		margin-top: 40px;
-		grid-template-columns: 1fr;
+		margin-top: 20px; 
+        grid-template-columns: 1fr;
 	}
 	
 	.home__image-wrapper,
@@ -693,6 +695,10 @@ textarea.form__input {
 	.home__image-wrapper {
 		order: -1;
 	}
+
+	.home-section {
+        padding-top: 20px !important; /* Further reduced for mobile */
+    }
 
 	.about__wrapper {
         flex-direction: column;
