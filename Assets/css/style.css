@@ -37,6 +37,7 @@ a {
 }
 
 .section {
+<<<<<<< HEAD
 	scroll-margin-top: 80px; 
     padding-top: 80px; 
     min-height: 100vh;
@@ -46,6 +47,11 @@ a {
     flex-direction: column;
     justify-content: center;
     scroll-margin-top: 60px;
+=======
+	padding-top: 20px;
+    padding-bottom: 20px;
+	min-height: auto;
+>>>>>>> parent of 9210793 (Update style.css)
 }
 
 .section__header {
@@ -104,6 +110,7 @@ a {
 }
 
 .l-main {
+<<<<<<< HEAD
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -111,6 +118,9 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+=======
+	padding-top: 80;
+>>>>>>> parent of 9210793 (Update style.css)
 }
 
 .l-header {
@@ -158,6 +168,7 @@ a {
 }
 
 .home-section {
+<<<<<<< HEAD
 	margin-top: 0 !important;
     padding-top: 80px !important;
     min-height: calc(100vh - 80px);
@@ -171,6 +182,16 @@ a {
 	max-width: 1200px;
 	margin: 40px auto 0;
 	padding: 0 20px;
+=======
+	padding-top: 0;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+>>>>>>> parent of 9210793 (Update style.css)
+}
+
+.home__wrapper {
+	margin-top: -80px;
 }
 
 .home__body {
@@ -261,7 +282,11 @@ a {
 .services-section,
 .portfolio-section,
 .contact-section {
+<<<<<<< HEAD
 	padding-top: 100px;
+=======
+	padding-top: 60px;
+>>>>>>> parent of 9210793 (Update style.css)
 	scroll-margin-top: 80px;
 }
 
@@ -594,12 +619,22 @@ a {
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
+<<<<<<< HEAD
     .l-header {
         height: 80px;
     }
 
     .nav__brand {
         height: 60px;
+=======
+	.l-main {
+		padding-top: -60px;
+	}
+
+	.nav__menu .nav__item a:hover,
+    .nav__menu .nav__item a:focus {
+        color: var(--color-white) !important;
+>>>>>>> parent of 9210793 (Update style.css)
     }
 
 <<<<<<< HEAD
@@ -663,6 +698,18 @@ a {
 		order: -1;
 	}
 
+<<<<<<< HEAD
+=======
+	.home__wrapper {
+        margin-top: -60px; /* Adjusted for mobile */
+    }
+
+    .section {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+>>>>>>> parent of 9210793 (Update style.css)
 	.about__wrapper {
 >>>>>>> parent of 86e125b (nav)
         flex-direction: column;
@@ -717,6 +764,30 @@ a {
     .portfolio__wrapper {
         grid-template-columns: 1fr;
     }
+<<<<<<< HEAD
+=======
+
+	.about-section,
+    .services-section,
+    .portfolio-section,
+    .contact-section {
+        padding-top: 40px; 
+    }
+
+	@media screen and (max-width: 992px) {
+		.services__wrapper {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	
+	@media screen and (max-width: 576px) {
+		.services__wrapper {
+			grid-template-columns: 1fr;
+		}
+	}
+	
+
+>>>>>>> parent of 9210793 (Update style.css)
 }
 =======
 }
