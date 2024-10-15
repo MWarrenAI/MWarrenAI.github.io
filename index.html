@@ -222,18 +222,33 @@
 		</div>
 	</section>
 
-	<section id="contact">
-	<div id="Content3">
-	<h3> Contact </h3>
-	<br>
-	<p> My email: </p> <a href = "pixel02mark@gmail.com"/><p>pixel02mark@gmail.com</p></a>
-	<br>
-	<p> LinkedIn: </p> <a href = "https://www.linkedin.com/in/mwarrenai/"/><p>https://www.linkedin.com/in/mwarrenai/</p></a>
-	<br>
-	<a href= "https://www.linkedin.com/in/mwarrenai/"><img class="img" src ="Assets/images/Buttons/icons8-linkedin-96.png" alt = "LinkedIn"/></a>
-	<a href= "https://github.com/MWarrenAI/"><img class="img" src ="Assets/images/Buttons/icons8-github-100.png" alt = "Github"/></a>
-	
+	<section class="section contact" id="contact">
+		<div class="container">
+			<div class="section__header">
+				<h2 class="section__title">Contact Me</h2>
+				<p class="section__description">Get in touch with me</p>
+			</div>
+			<div class="contact__wrapper">
+				<form action="https://formsubmit.co/mwarrenai@gmail.com" method="POST" class="contact__form">
+					<div class="form__group">
+						<label for="name" class="form__label">Name</label>
+						<input type="text" id="name" name="name" class="form__input" required>
+					</div>
+					<div class="form__group">
+						<label for="email" class="form__label">Email</label>
+						<input type="email" id="email" name="email" class="form__input" required>
+					</div>
+					<div class="form__group">
+						<label for="message" class="form__label">Message</label>
+						<textarea id="message" name="message" class="form__input" required></textarea>
+					</div>
+					<button type="submit" class="btn btn--primary">Send Message</button>
+				</form>
+			</div>
+		</div>
 	</section>
+
+
 	</main>
 	
 
