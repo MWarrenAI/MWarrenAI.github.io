@@ -1,11 +1,11 @@
 :root {
-    --color-primary: #4a4e69;
-    --color-primary-dark: #22223b;
-    --color-secondary: #9a8c98;
-    --bg-dark: #121212;
-    --bg-light: #1e1e1e;
+    --color-primary: #ff4136;
+    --color-primary-dark: #ff4036c4;
+    --color-secondary: #ed8936;
+    --bg-dark: #1e3a5f;
+    --bg-light: #2c5282;
     --color-white: #ffffff;
-    --color-text: #c9c9c9;
+    --color-text: #e2e8f0;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -50,18 +50,34 @@ a {
 }
 
 .btn--primary {
-    background-color: var(--color-primary);
+    background-color: var(--bg-dark);
     color: var(--color-white);
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--bg-dark);
 }
 
 .btn--primary:hover {
-    background-color: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
+    background-color: var(--bg-light);
+    border-color: var(--bg-light);
 }
 
 .btn i {
     margin-right: 8px;
+}
+
+.nav__link.contact-btn {
+    background-color: var(--color-secondary); 
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav__link.contact-btn:hover {
+    background-color: var(--color-primary-dark); 
+}
+
+.nav__link.contact-btn i {
+    margin-right: 5px;
 }
 
 /* Header */
@@ -70,7 +86,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #7F0000;
+    background-color: var(--color-primary);
     z-index: 100;
     transition: all 0.3s ease;
     height: 80px; 
