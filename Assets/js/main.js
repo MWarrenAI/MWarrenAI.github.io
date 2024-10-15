@@ -18,41 +18,42 @@ window.addEventListener('scroll', () => {
     }
 })
 
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    var form = this;
-    var formData = new FormData(form);
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const successModal = document.getElementById('successModal');
+    const closeModal = document.querySelector('.close');
 
-    fetch('https://formspree.io/f/mvgoobrr', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch('https://formspree.io/f/mvgoobrr', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                successModal.style.display = 'block';
+                form.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        }).catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting the form. Please try again.');
+        });
+    });
+
+    closeModal.addEventListener('click', function() {
+        successModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == successModal) {
+            successModal.style.display = 'none';
         }
-    }).then(response => {
-        if (response.ok) {
-            // Show the success modal
-            document.getElementById('successModal').style.display = "block";
-            form.reset();
-        } else {
-            throw new Error('Form submission failed');
-        }
-    }).catch(error => {
-        console.error('Error:', error);
-        alert('There was an error sending your message. Please try again later.');
     });
 });
-
-// Close the modal when clicking on <span> (x)
-document.querySelector('.close').onclick = function() {
-    document.getElementById('successModal').style.display = "none";
-}
-
-// Close the modal when clicking outside of it
-window.onclick = function(event) {
-    var modal = document.getElementById('successModal');
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
