@@ -89,7 +89,7 @@ a {
     background-color: var(--color-primary);
     z-index: 100;
     transition: all 0.3s ease;
-    height: 80px; 
+    height: 120px; 
 }
 
 .nav {
@@ -102,19 +102,21 @@ a {
 
 .nav__brand-link {
     position: absolute;
-    top: -20px;
+    top: 10px; 
     left: 20px;
     z-index: 101;
 }
 
 .nav__brand {
-    height: 100px;
+    height: 100px; 
 }
 
 .nav__list {
     display: flex;
     list-style: none;
     margin-left: auto;
+    align-items: center; 
+    height: 100%; 
 }
 
 .nav__item {
@@ -139,8 +141,8 @@ a {
 
 
 /* Main Content */
-l-main {
-    padding-top: 80px; 
+.l-main {
+    padding-top: 120px; 
 }
 
 .section__header {
@@ -148,7 +150,7 @@ l-main {
 }
 
 .section {
-    min-height: calc(100vh - 80px); 
+    min-height: calc(100vh - 120px); /* Adjusted to account for the new header height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,8 +175,8 @@ l-main {
 
 /* Home Section */
 .home-section {
-    padding-top: 80px; 
-	min-height: calc(100vh - 80px);
+    padding-top: 120px; 
+	min-height: calc(100vh - 120px);
 }
 
 .home__wrapper {
