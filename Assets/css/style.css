@@ -694,11 +694,6 @@ textarea.form__input {
 	right: 0;
 }
 
-.nav__open,
-.nav__close {
-    display: none;
-}
-
 .content-wrapper {
 	transition: margin-left 0.5s;
 }
@@ -770,59 +765,31 @@ textarea.form__input {
 	scroll-margin-top: 40px; 
 }
 @media screen and (max-width: 768px) {
-    .nav__menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100%;
-        background-color: var(--bg-dark);
-        padding: 60px 20px;
-        overflow-y: auto;
-        transition: right 0.3s ease;
-    }
-
-    .nav__menu.show-menu {
-        right: 0;
-    }
-
     .nav__list {
-        flex-direction: column;
-        row-gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 10px;
     }
 
     .nav__item {
-        width: 100%;
+        margin: 0 10px;
     }
 
-    .nav__open {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-        color: var(--color-text);
+    .home__wrapper,
+    .about {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .nav__close {
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 24px;
-        cursor: pointer;
-        color: var(--color-text);
+    .home__image-wrapper,
+    .about__image-wrapper {
+        order: -1;
+        margin-bottom: 20px;
     }
 
-    .nav__open:hover,
-    .nav__close:hover {
-        color: var(--color-primary);
-    }
-
-    .content-wrapper {
-        transition: margin-left 0.5s;
-    }
-
-    .content-wrapper.menu-open {
-        margin-left: 80%;
+    .services__wrapper,
+    .portfolio__wrapper {
+        grid-template-columns: 1fr;
     }
 }
 
