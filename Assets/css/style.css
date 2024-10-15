@@ -190,10 +190,32 @@ body {
 	justify-content: space-between;
 }
 
+.nav__menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: calc(100vh - 80px);
+    background-color: var(--bg-dark);
+    transition: 0.5s;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.nav__menu.nav__menu--open {
+    left: 0;
+}
+
+
 .nav__list {
-	display: flex;
-	align-items: center;
-	column-gap: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.nav__item {
+	width: 100%;
 }
 
 .nav__item a {
@@ -606,6 +628,19 @@ textarea.form__input {
     margin-top: 10px; 
 }
 
+.nav__open,
+.nav__close {
+	display: block;
+	font-size: 24px;
+	cursor: pointer;
+	color: var(--color-text);
+}
+
+.nav__close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
 
 @media screen and (max-width: 768px) {
 	.l-main {
@@ -622,15 +657,12 @@ textarea.form__input {
     }
 
 	.nav__menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100%;
-        padding: 80px 0 0;
-        background-color: var(--bg-dark);
-        transition: 0.5s;
-        z-index: 100;
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+        overflow-y: visible;
     }
 
 	.nav__item a {
@@ -642,31 +674,46 @@ textarea.form__input {
 		color: var(--color-white);
 	}
 
+	.nav__link {
+		display: block;
+		padding: 10px 0;
+		color: var(--color-text);
+		transition: color 0.3s ease;
+	}
+
+	.nav__link:hover {
+		color: var(--color-white);
+	}
+
 	.nav__list {
-        flex-direction: column;
-        row-gap: 30px;
+        flex-direction: row;
+        column-gap: 30px;
     }
 
-	.nav__open,
-    .nav__close {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-	.nav__close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
+    .nav__item {
+        width: auto;
     }
 
 	.show-menu {
         right: 0;
     }
-
+	
+	.nav__open,
+    .nav__close {
+        display: none;
+    }
+	
 	.nav__open:hover,
 	.nav__close:hover {
 		color: var(--color-primary);
+	}
+
+	.content-wrapper {
+		transition: margin-left 0.5s;
+	}
+	
+	.content-wrapper.menu-open {
+		margin-left: 80%;
 	}
 
 	.home__wrapper,
@@ -677,7 +724,7 @@ textarea.form__input {
 	
 	.home__image-wrapper,
 	.about__image-wrapper {
-		grid-column: 1 / -1;
+		grid-column: -1 / -1;
 	}
 	
 	.home__image-wrapper {
@@ -731,6 +778,12 @@ textarea.form__input {
         padding-top: 30px;
 		scroll-margin-top: 40px; 
     }
+
+	@media screen and (min-width: 768px) {
+		.content-wrapper.menu-open {
+			margin-left: 0;
+		}
+	}
 
 	@media screen and (max-width: 992px) {
 		.services__wrapper {
