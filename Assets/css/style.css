@@ -39,6 +39,7 @@ a {
 .section {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	scroll-margin-top: 80px; 
     padding-top: 80px; 
     min-height: 100vh;
@@ -48,6 +49,11 @@ a {
     flex-direction: column;
     justify-content: center;
     scroll-margin-top: 60px;
+=======
+	padding-top: 20px;
+    padding-bottom: 20px;
+	min-height: auto;
+>>>>>>> parent of 9210793 (Update style.css)
 =======
 	padding-top: 20px;
     padding-bottom: 20px;
@@ -118,6 +124,7 @@ a {
 .l-main {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -125,6 +132,9 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+=======
+	padding-top: 80;
+>>>>>>> parent of 9210793 (Update style.css)
 =======
 	padding-top: 80;
 >>>>>>> parent of 9210793 (Update style.css)
@@ -198,6 +208,10 @@ a {
     display: flex;
     align-items: center;
 >>>>>>> parent of 9210793 (Update style.css)
+}
+
+.home__wrapper {
+	margin-top: -80px;
 }
 
 .home__wrapper {
@@ -298,7 +312,11 @@ a {
 .contact-section {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	padding-top: 100px;
+=======
+	padding-top: 60px;
+>>>>>>> parent of 9210793 (Update style.css)
 =======
 	padding-top: 60px;
 >>>>>>> parent of 9210793 (Update style.css)
@@ -639,6 +657,7 @@ a {
 @media screen and (max-width: 768px) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     .l-header {
         height: 80px;
     }
@@ -646,6 +665,8 @@ a {
     .nav__brand {
         height: 60px;
 =======
+=======
+>>>>>>> parent of 9210793 (Update style.css)
 =======
 >>>>>>> parent of 9210793 (Update style.css)
 	.l-main {
