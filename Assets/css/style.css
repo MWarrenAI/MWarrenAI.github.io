@@ -96,17 +96,22 @@ body {
 }
 
 .section__header {
-	text-align: center;
+	text-align: left;
 	margin-bottom: 40px;
+	width: 100%;
+	max-width: 1200px;
+	padding: 0 20px;
 }
 
 .section__title {
-	max-width: 400px;
+	max-width: none;
+	font-size: 40px;
+	margin-bottom: 10px;
 }
 
 .section__description {
-	max-width: 400px;
-	font-size: 12px;
+	max-width: none;
+	font-size: 18px;
 }
 
 .btn {
@@ -299,11 +304,11 @@ body {
 }
 
 .services__wrapper {
-	margin-top: 60px;
+	margin-top: 200px !important;
 	display: gird;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 20px;
-	justify-content: center;
+	justify-content: start;
 	width: 100%;
 }
 
@@ -413,6 +418,71 @@ footer {
     align-self: flex-start;
 }
 
+.portfolio__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project__card {
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio__category {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin: 15px 0 10px 15px;
+}
+
+.portfolio__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin: 0 15px 10px;
+}
+
+.portfolio__description {
+    font-size: 14px;
+    color: var(--color-text);
+    margin: 0 15px 15px;
+    line-height: 1.5;
+}
+
+.portfolio__link {
+    display: inline-block;
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 15px 15px;
+    transition: color 0.3s ease;
+}
+
+.portfolio__link:hover {
+    color: var(--color-primary-dark);
+}
 
 @media screen and (max-width: 768px) {
 	.l-main {
