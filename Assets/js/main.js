@@ -1,14 +1,34 @@
-const navMenu = document.getElementById('nav-menu')
-const navOpen = document.getElementById('nav-open')
-const navClose = document.getElementById('nav-close')
-const navItem = document.querySelectorAll('.nav_item')
-navOpen.addEventListener('click', () => {
-    navMenu.classList('nav__menu--open')
-})
-navItem.forEach(item => {
-    item.addEventListener('click', () =>
-        navMenu.classList.remove('nav__menu--open'))
-})
+document.addEventListener('DOMContentLoaded', function() {
+    const navMenu = document.querySelector('.nav__menu');
+    const navOpen = document.querySelector('.nav__open');
+    const navClose = document.querySelector('.nav__close');
+
+    // Function to show the menu
+    const showMenu = () => {
+        navMenu.classList.add('show-menu');
+    }
+
+    // Function to hide the menu
+    const hideMenu = () => {
+        navMenu.classList.remove('show-menu');
+    }
+
+    // Event listener for opening the menu
+    if (navOpen) {
+        navOpen.addEventListener('click', showMenu);
+    }
+
+    // Event listener for closing the menu
+    if (navClose) {
+        navClose.addEventListener('click', hideMenu);
+    }
+
+    // Close menu when clicking on a nav link
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', hideMenu);
+    });
+});
 const header = document.getElementById('l-header')
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50){
