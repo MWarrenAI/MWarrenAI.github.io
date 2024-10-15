@@ -244,6 +244,10 @@ body {
     margin: 0 auto;
 }
 
+.home__image{
+	border-radius: 50%;
+}
+
 .home__image, 
 .about__image{
     width: 100%;
@@ -253,9 +257,7 @@ body {
 }
 
 .home__content {
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
+	flex: 1;
 }
 
 .home__subtitle {
@@ -679,11 +681,14 @@ textarea.form__input {
 	}
 	
 	.home__image-wrapper {
-		order: -1;
+		flex: 1;
+		text-align: center;
 	}
 
 	.home__wrapper {
-        margin-top: -60px; /* Adjusted for mobile */
+        display: flex;
+		align-items: center;
+		justify-content: space-between;
     }
 
     .section {
