@@ -106,14 +106,12 @@ body {
 
 .section {
 	scroll-margin-top: 80px; 
-    padding-top: 80px; 
+    padding: 100 0px;
     min-height: 100vh;
-	min-height: 100vh;
     padding: 80px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    scroll-margin-top: 60px;
 }
 
 .section__header {
@@ -239,18 +237,17 @@ body {
 }
 
 .home-section {
-	margin-top: 0 !important;
-    padding-top: 80px !important;
+	padding-top: 120px !important;
     min-height: calc(100vh - 80px);
 }
 
 .home__wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 20px;
+	gap: 60px;
 	align-items: center;
 	max-width: 1200px;
-	margin: 40px auto 0;
+	margin: 0 auto;
 	padding: 0 20px;
 }
 
@@ -259,13 +256,15 @@ body {
 	grid-column: 1 / 2;
 }
 
-.home__image-wrapper {
+.home__image-wrapper,
+.about__image-wrapper {
     width: 100%;
-    max-width: 500px; 
+    max-width: 450px; 
     margin: 0 auto;
 }
 
-.home__image {
+.home__image, 
+.about__image{
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -342,22 +341,19 @@ body {
 .services-section,
 .portfolio-section,
 .contact-section {
-	padding-top: 100px;
+	padding-top: 120px;
 	scroll-margin-top: 80px;
-}
-
-.about-section {
-    margin-top: 0 !important; 
-    padding-top: 100px !important;
 }
 
 .services__wrapper {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 30px;
-	justify-content: center;
-	width: 100%;
-	margin-top: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
 }
 
 .services__card {
@@ -412,8 +408,12 @@ footer {
 }
 
 .about {
-    margin-top: 220px !important;
-    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .about__wrapper {
@@ -437,7 +437,6 @@ footer {
 
 .about__content {
     flex: 1;
-    text-align: left;
 }
 
 .about__title {
@@ -473,7 +472,8 @@ footer {
     justify-content: center;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto 0;
+    padding: 0 20px;
 }
 
 .project__card {
@@ -530,6 +530,7 @@ footer {
 .contact__wrapper {
     max-width: 600px;
     margin: 0 auto;
+	padding: 0 20px;
 }
 
 .contact__form {
