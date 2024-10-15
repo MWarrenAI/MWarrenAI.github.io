@@ -303,8 +303,11 @@ body {
 	color: var(--color-white);
 }
 
+.services-section {
+	margin-top: 200 !important;
+}
+
 .services__wrapper {
-	margin-top: 200px !important;
 	display: gird;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 20px;
