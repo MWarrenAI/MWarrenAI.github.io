@@ -697,6 +697,7 @@ a {
         flex: none;
         width: 100%;
     }
+<<<<<<< HEAD
 
     .home__image {
         margin-bottom: 20px;
@@ -717,3 +718,6 @@ a {
         grid-template-columns: 1fr;
     }
 }
+=======
+}
+>>>>>>> parent of 677a2f3 (services)
