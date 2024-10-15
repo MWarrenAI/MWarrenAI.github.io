@@ -57,8 +57,20 @@ button {
 	cursor: pointer
 }
 
-.btn--contact {
+.btn--contact,
+.btn--contact a {
     color: var(--color-white) !important;
+    text-decoration: none;
+}
+
+.btn--contact:hover,
+.btn--contact:hover a {
+    color: var(--color-white) !important;
+}
+
+.btn--contact i {
+    color: var(--color-white);
+    margin-right: 5px;
 }
 
 
@@ -407,6 +419,7 @@ footer {
     height: auto;
     object-fit: cover;
     border-radius: 15px;
+}
 
 .about__content {
     flex: 1;
