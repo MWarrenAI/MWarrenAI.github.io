@@ -19,17 +19,25 @@ window.addEventListener('scroll', () => {
 })
 
 document.addEventListener('DOMContentLoaded', function() {
-    const homeLink = document.querySelector('a[href="#home"]');
+    const navLinks = document.querySelectorAll('.nav__link');
     
-    if (homeLink) {
-        homeLink.addEventListener('click', function(e) {
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const headerHeight = document.querySelector('.l-header').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
-    }
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function() {
