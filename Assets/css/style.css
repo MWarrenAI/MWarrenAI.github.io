@@ -209,11 +209,9 @@ body {
 }
 
 .home-section {
-	scroll-margin-top: 0;
-    min-height: calc(100vh - 60px);
 	margin-top: 0 !important;
-    padding-top: 60px !important;
-    min-height: calc(100vh - 60px);
+    padding-top: 80px !important;
+    min-height: calc(100vh - 80px);
 }
 
 .home__wrapper {
