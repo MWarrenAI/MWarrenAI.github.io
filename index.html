@@ -229,7 +229,7 @@
 				<p class="section__description">Get in touch with me</p>
 			</div>
 			<div class="contact__wrapper">
-				<form action="https://formspree.io/f/mvgoobrr" method="POST" class="contact__form">
+				<form id="contactForm" class="contact__form">
 					<div class="form__group">
 						<label for="name" class="form__label">Name</label>
 						<input type="text" id="name" name="name" class="form__input" required>
@@ -247,6 +247,13 @@
 			</div>
 		</div>
 	</section>
+
+	<div id="successModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>Your message has been sent successfully!</p>
+		</div>
+	</div>
 
 
 	</main>
