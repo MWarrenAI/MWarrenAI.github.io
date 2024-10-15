@@ -304,8 +304,20 @@ body {
 }
 
 .services-section {
-	margin-top: 200px !important;
+	margin-top: 250px !important;
 	padding-top: 60px !important;
+	border-top: 5px solid red !important;
+}
+
+.services-section::before {
+    content: '';
+    display: block;
+    height: 250px;
+    background-color: rgba(255, 0, 0, 0.2); /* Semi-transparent red */
+    position: absolute;
+    top: -250px;
+    left: 0;
+    right: 0;
 }
 
 .services__wrapper {
