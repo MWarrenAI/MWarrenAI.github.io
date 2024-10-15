@@ -19,15 +19,17 @@ window.addEventListener('scroll', () => {
 })
 
 document.addEventListener('DOMContentLoaded', function() {
-    const homeLink = document.querySelector('a[data-section="home"]');
+    const homeLink = document.querySelector('a[href="#home"]');
     
-    homeLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (homeLink) {
+        homeLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function() {

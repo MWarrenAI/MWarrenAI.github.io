@@ -315,7 +315,7 @@ body {
 .portfolio-section,
 .contact-section {
 	padding-top: 100px;
-    background-color: #f8f8f8; 
+	scroll-margin-top: 80px;
 }
 
 .about-section {
@@ -616,9 +616,20 @@ textarea.form__input {
 		opacity: 0;
 	}
 
+	.nav__link {
+		color: var(--color-white);
+		font-size: 16px;
+		transition: all 0.3s cubic-bezier(0.645, 0.045. 0.355, 1);
+		text-decoration: none;
+	}
+
 	.nav__list {
 		flex-direction: column;
 		row-gap: 20px;
+	}
+
+	.nav__link.active {
+		color: var(--color-primary);
 	}
 
 	.nav__open,
