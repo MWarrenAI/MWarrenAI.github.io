@@ -304,11 +304,11 @@ body {
 }
 
 .services-section {
-	margin-top: 200 !important;
+	margin-top: 200px !important;
 }
 
 .services__wrapper {
-	display: gird;
+	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 20px;
 	justify-content: start;
@@ -319,7 +319,7 @@ body {
 	justify-self: center;
 	background-color: var(--bg-light);
 	box-shadow: var(--shadow);
-	padding: 32 16px;
+	padding: 32px 16px;
 	width: 100%;
 	max-width: 300px;
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
