@@ -57,6 +57,11 @@ button {
 	cursor: pointer
 }
 
+.btn--contact {
+    color: var(--color-white) !important;
+}
+
+
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
@@ -231,16 +236,14 @@ body {
 }
 
 .home__image-wrapper {
-	grid-column: 2 / 3;
-	justify-content: center;
-	display: flex;
-	margin-bottom: 50px;
+    width: 100%;
+    max-width: 400px; /* Adjust this value as needed */
+    margin: 0 auto;
 }
 
 .home__image {
 	justify-self: center;
 	max-width: 100%;
-	border-radius:8px;
 }
 
 .home__content {
@@ -394,18 +397,16 @@ footer {
 }
 
 .about__image-wrapper {
-    flex: 0 0 auto;
-    margin-right: 40px;
-	margin-left: 60px;
+    width: 100%;
+    max-width: 500px; /* Adjust this value as needed */
+    margin: 0 auto;
 }
 
 .about__image {
-    max-width: 300px;
-	width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 8px;
-	object-fit: cover;
-}
+    object-fit: cover;
+    border-radius: 15px;
 
 .about__content {
     flex: 1;
