@@ -1,5 +1,6 @@
 :root {
 <<<<<<< HEAD
+<<<<<<< HEAD
     --color-primary: #ff4136;
     --color-primary-dark: #ff4036c4;
     --color-secondary: #ed8936;
@@ -9,6 +10,8 @@
     --color-text: #e2e8f0;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 =======
+=======
+>>>>>>> parent of 7737b8b (new css)
 	--bg-light: #333e4d;
 	--bg-dark: #2a3543;
 	--bg-darker: #212a36;
@@ -16,6 +19,9 @@
 	--color-primary-dark: #772fed;
 	--color-text: #a2acbb;
 	--color-white: #fff;
+<<<<<<< HEAD
+>>>>>>> parent of 7737b8b (new css)
+=======
 >>>>>>> parent of 7737b8b (new css)
 }
 
@@ -111,7 +117,10 @@ body {
 .container {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 7737b8b (new css)
 =======
 >>>>>>> parent of 7737b8b (new css)
 	width: 100%;
@@ -121,6 +130,7 @@ body {
 }
 
 .section {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,6 +159,10 @@ body {
     padding-bottom: 20px;
 	min-height: auto;
 >>>>>>> parent of 9210793 (Update style.css)
+=======
+	padding-top: 40px;
+    padding-bottom: 40px;
+>>>>>>> parent of 7737b8b (new css)
 =======
 	padding-top: 40px;
     padding-bottom: 40px;
@@ -211,6 +225,7 @@ body {
 }
 
 .l-main {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -569,6 +584,26 @@ body {
 }
 
 .nav {
+=======
+	padding-top: 60px;
+}
+
+.l-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--bg-dark);
+	min-height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.nav {
+>>>>>>> parent of 7737b8b (new css)
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -587,6 +622,9 @@ body {
     transition: 0.5s;
     padding: 20px;
     overflow-y: auto;
+<<<<<<< HEAD
+>>>>>>> parent of 7737b8b (new css)
+=======
 >>>>>>> parent of 7737b8b (new css)
 }
 
@@ -597,6 +635,7 @@ body {
 
 .nav__list {
     display: flex;
+<<<<<<< HEAD
 <<<<<<< HEAD
     list-style: none;
     margin-left: auto;
@@ -788,6 +827,120 @@ body {
 	column-gap: 20px;
 }
 
+=======
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.nav__item {
+	width: 100%;
+}
+
+.nav__item a {
+    color: var(--color-text);
+    transition: color 0.3s ease;
+    text-decoration: none; 
+}
+
+.nav__item a:hover,
+.nav__item a:focus {
+    color: var(--color-white) !important;
+}
+
+.nav__item.btn--primary a {
+    color: var(--color-white);
+}
+
+.nav__item.btn--primary:hover a {
+    color: var(--color-white);
+}
+
+.nav__item.btn--primary i {
+    color: var(--color-white);
+}
+
+.nav__open,
+.nav__close {
+	display: none;
+	font-size: 16px;
+}
+
+.home-section {
+	padding-top: 0;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+}
+
+.home__body {
+	text-align: center;
+	grid-column: 1 / 2;
+}
+
+.home__image-wrapper,
+.about__image-wrapper {
+    width: 100%;
+    max-width: 300px; 
+    margin: 0 auto;
+}
+
+.home__image{
+	border-radius: 50%;
+}
+
+.home__image, 
+.about__image{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.home__content {
+	flex: 1;
+}
+
+.home__subtitle {
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--color-white);
+	margin-bottom: 12px;
+}
+
+.home__title {
+	font-size: 40px;
+	margin: 0;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.home__name {
+	font-size: 40px;
+	color: var(--color-primary);
+	font-weight: 700;
+}
+
+.home__description {
+	margin-top: 32px;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.social {
+	display: flex;
+	justify-content: flex-start;
+    width: 100%;
+}
+
+.social__list {
+	font-size: 24px;
+	color: var(--color-text);
+	transition: color 0.3s ease;
+	display: flex;
+	column-gap: 20px;
+}
+
+>>>>>>> parent of 7737b8b (new css)
 .social__item {
 	font-size: 24px;
 	display: flex;
@@ -879,6 +1032,9 @@ footer {
 }
 
 .about {
+<<<<<<< HEAD
+>>>>>>> parent of 7737b8b (new css)
+=======
 >>>>>>> parent of 7737b8b (new css)
     display: flex;
     align-items: center;
@@ -1071,6 +1227,7 @@ textarea.form__input {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .nav__open,
 .nav__close {
     display: none;
@@ -1126,6 +1283,15 @@ textarea.form__input {
 }
 >>>>>>> parent of 7737b8b (new css)
 
+=======
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+>>>>>>> parent of 7737b8b (new css)
 #Ender {
     padding-bottom: 20px 0; 
 }
@@ -1283,6 +1449,7 @@ textarea.form__input {
 @media screen and (max-width: 768px) {
     .nav__list {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 86e125b (nav)
@@ -1372,6 +1539,8 @@ textarea.form__input {
     .home__wrapper {
         flex-direction: column-reverse;
 =======
+=======
+>>>>>>> parent of 7737b8b (new css)
         flex-wrap: wrap;
         justify-content: center;
         row-gap: 10px;
@@ -1399,6 +1568,7 @@ textarea.form__input {
         margin-bottom: 20px;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /* Adjust about section for mobile */
     .about__wrapper {
@@ -1443,6 +1613,8 @@ textarea.form__input {
 }
 >>>>>>> parent of 677a2f3 (services)
 =======
+=======
+>>>>>>> parent of 7737b8b (new css)
     .services__wrapper,
     .portfolio__wrapper {
         grid-template-columns: 1fr;
@@ -1455,5 +1627,9 @@ textarea.form__input {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+<<<<<<< HEAD
+}
+>>>>>>> parent of 7737b8b (new css)
+=======
 }
 >>>>>>> parent of 7737b8b (new css)
