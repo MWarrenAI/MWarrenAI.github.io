@@ -212,12 +212,24 @@ body {
 .nav__item a {
     color: var(--color-text);
     transition: color 0.3s ease;
-    text-decoration: none; /* Ensure no underline */
+    text-decoration: none; 
 }
 
 .nav__item a:hover,
 .nav__item a:focus {
-    color: var(--color-white) !important; /* Use !important to override any conflicting styles */
+    color: var(--color-white) !important;
+}
+
+.nav__item.btn--primary a {
+    color: var(--color-white);
+}
+
+.nav__item.btn--primary:hover a {
+    color: var(--color-white);
+}
+
+.nav__item.btn--primary i {
+    color: var(--color-white);
 }
 
 .nav__open,
@@ -249,7 +261,7 @@ body {
 
 .home__image-wrapper {
     width: 100%;
-    max-width: 400px; /* Adjust this value as needed */
+    max-width: 400px; 
     margin: 0 auto;
 }
 
@@ -410,7 +422,7 @@ footer {
 
 .about__image-wrapper {
     width: 100%;
-    max-width: 500px; /* Adjust this value as needed */
+    max-width: 500px; 
     margin: 0 auto;
 }
 
