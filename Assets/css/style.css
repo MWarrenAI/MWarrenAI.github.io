@@ -306,18 +306,6 @@ body {
 .services-section {
 	margin-top: 250px !important;
 	padding-top: 60px !important;
-	border-top: 5px solid red !important;
-}
-
-.services-section::before {
-    content: '';
-    display: block;
-    height: 250px;
-    background-color: rgba(255, 0, 0, 0.2); /* Semi-transparent red */
-    position: absolute;
-    top: -250px;
-    left: 0;
-    right: 0;
 }
 
 .services__wrapper {
@@ -380,6 +368,11 @@ footer {
 	text-align: center;
 }
 
+.about-section {
+	margin-top: 250px !important;
+	padding-top: 60px !important;
+}
+
 .about {
     margin-top: 220px !important;
     padding-top: 60px;
@@ -434,6 +427,11 @@ footer {
 
 .about .btn {
     align-self: flex-start;
+}
+
+.portfolio-section {
+	margin-top: 250px !important;
+	padding-top: 60px !important;
 }
 
 .portfolio__wrapper {
@@ -495,6 +493,11 @@ footer {
 
 .portfolio__link:hover {
     color: var(--color-primary-dark);
+}
+
+.contact-section {
+	margin-top: 250px !important;
+	padding-top: 60px !important;
 }
 
 .contact__wrapper {
