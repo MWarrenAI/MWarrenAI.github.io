@@ -230,28 +230,20 @@
 			</div>
 			<div class="contact__wrapper">
 				<form action="https://formspree.io/f/mvgoobrr" method="POST" class="contact__form">
-					<div class="form__group">
-						<label for="name" class="form__label">Name</label>
-						<input type="text" id="name" name="name" class="form__input" required>
-					</div>
-					<div class="form__group">
-						<label for="email" class="form__label">Email</label>
-						<input type="email" id="email" name="email" class="form__input" required>
-					</div>
-					<div class="form__group">
-						<label for="message" class="form__label">Message</label>
-						<textarea id="message" name="message" class="form__input" required></textarea>
-					</div>
-					<button type="submit" class="btn btn--primary">Send Message</button>
-				</form>
+					<form id="contactForm" class="contact__form">
+						<div class="form__group">
+							<label for="name" class="form__label">Name</label>
+							<input type="text" id="name" name="name" class="form__input" required>
 			</div>
-		</div>
 	</section>
+	
+	<div id="successModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>Your message has been sent successfully!</p>
+		</div>
+	</div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of 860bdd9 (contact page)
 	</main>
 	
 	<div id="Ender">
