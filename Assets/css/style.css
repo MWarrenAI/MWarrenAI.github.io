@@ -680,6 +680,7 @@ a {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     .nav__menu {
         position: fixed;
         top: 0;
@@ -693,6 +694,8 @@ a {
 
     .nav__list {
 =======
+=======
+>>>>>>> parent of 86e125b (nav)
 	.nav__link {
 		color: var(--color-white);
 		font-size: 16px;
