@@ -717,6 +717,35 @@ textarea.form__input {
 
 @media screen and (max-width: 768px) {
 
+	.home__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .home__content {
+        grid-column: 1;
+        grid-row: 2;
+        text-align: center;
+    }
+
+    .home__image-wrapper {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    .about__wrapper {
+        flex-direction: column;
+    }
+
+    .about__image-wrapper {
+        order: 1;
+        margin-top: 30px;
+    }
+
+    .about__content {
+        order: 2;
+    }
+
 	.off-screen-menu {
     background-color:  rgb(34, 37, 49);
     height: 100vh;
