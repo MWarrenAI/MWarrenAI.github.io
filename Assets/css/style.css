@@ -659,9 +659,23 @@ textarea.form__input {
     font-size: 3rem;
     transition: .3s ease;
 	}
+
 	.off-screen-menu.active {
 		right: 0;
 	}
+
+	.off-screen-menu .nav__link.contact-btn {
+		font-size: 1rem;
+		padding: 8px 12px;
+		margin-top: 10px;
+		width: 80%;
+		text-align: center;
+		display: inline-block;
+	}
+	
+	.off-screen-menu .nav__link.contact-btn i {
+		font-size: 0.9rem;
+	}	
 
     .nav__toggle {
         display: block;
@@ -720,8 +734,4 @@ textarea.form__input {
 		top: 50%;
 		transform: translate(-50%, -50%) rotate(-45deg);
 	}
-	.nav__link.contact-btn {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
 }
