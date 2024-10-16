@@ -104,10 +104,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function scrollToTop() {
-        rootElement.scrollTo({
-            top: 0,
-            behavior: "smooth"
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener("click", function() {
+            console.log("Scroll to top button clicked");
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
     }
 
