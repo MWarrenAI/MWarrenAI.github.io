@@ -721,7 +721,7 @@ textarea.form__input {
 		transform: translate(-50%, -50%) rotate(-45deg);
 	}
 	.nav__link.contact-btn {
-        padding: 8px 12px;
+        padding: 10px 15px;
         font-size: 14px;
     }
 }
