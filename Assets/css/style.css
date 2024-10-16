@@ -794,6 +794,11 @@ body {
         order: 2;
     }
 
+	.about__wrapper,
+    .services__wrapper {
+        padding: 40px 15px; 
+    }
+
 	.off-screen-menu {
     background-color:  rgb(34, 37, 49);
     height: 100vh;
@@ -860,7 +865,11 @@ body {
 		height: 50px;
 		width: 40px;
 		margin-left: auto;
-		position: relative;
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		cursor: pointer;
+		z-index: 1000;
 	}
 	.ham-menu span {
 		height: 5px;
