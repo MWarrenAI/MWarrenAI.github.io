@@ -81,18 +81,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    const successModal = document.getElementById('successModal');
-
-    if (contactForm && successModal) {
-        contactForm.addEventListener('submit', function(e) {
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        const successModal = document.getElementById('successModal');
+        const closeModal = document.querySelector('.close');
+    
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
-            successModal.style.display = 'block';
-            setTimeout(() => { successModal.style.display = 'none'; }, 3000);
-            contactForm.reset();
+    
+            const formData = new FormData(form);
+    
+            fetch('https://formspree.io/f/mvgoobrr', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    successModal.style.display = 'block';
+                    form.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting the form. Please try again.');
+            });
         });
-    }
+    
+        closeModal.addEventListener('click', function() {
+            successModal.style.display = 'none';
+        });
+    
+        window.addEventListener('click', function(event) {
+            if (event.target == successModal) {
+                successModal.style.display = 'none';
+            }
+        });
+    });
 
     // Scroll to top functionality
     function handleScroll() {
