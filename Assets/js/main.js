@@ -81,6 +81,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    const successModal = document.getElementById('successModal');
+
+    if (contactForm && successModal) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            successModal.style.display = 'block';
+            setTimeout(() => { successModal.style.display = 'none'; }, 3000);
+            contactForm.reset();
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('contactForm');
         const successModal = document.getElementById('successModal');
