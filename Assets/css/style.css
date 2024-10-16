@@ -727,6 +727,105 @@ body {
 	}
 }
 
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .section__title {
+        font-size: 1.8rem;
+    }
+
+    .home__title {
+        font-size: 1.8rem;
+    }
+
+    .home__subtitle {
+        font-size: 0.9rem;
+    }
+
+    .home__description {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .about__wrapper,
+    .services__wrapper {
+        padding: 30px 10px;
+    }
+
+    .service__card {
+        padding: 15px;
+    }
+
+    .service__title {
+        font-size: 1.2rem;
+    }
+
+    .portfolio__item {
+        padding: 15px;
+    }
+
+    .portfolio__category {
+        font-size: 12px;
+    }
+
+    .portfolio__title {
+        font-size: 18px;
+    }
+
+    .portfolio__description {
+        font-size: 13px;
+    }
+
+    .contact__wrapper {
+        padding: 0 10px;
+    }
+
+    .form__input {
+        padding: 8px;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .ham-menu {
+        width: 35px;
+        right: 15px;
+    }
+
+    .ham-menu span {
+        height: 4px;
+    }
+
+    .off-screen-menu {
+        max-width: 100%;
+    }
+
+    .off-screen-menu .nav__link {
+        font-size: 2.5rem;
+    }
+
+    .off-screen-menu .nav__link.contact-btn {
+        font-size: 2.5rem;
+        padding: 8px 12px;
+    }
+
+    .off-screen-menu .nav__link.contact-btn i {
+        font-size: 2.5rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
 	.hidden, .hidden-right, .hidden-bottom {
