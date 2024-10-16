@@ -117,9 +117,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners
     window.addEventListener('scroll', handleHeaderScroll);
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', setupHiddenElements);
-    scrollToTopBtn.addEventListener("click", scrollToTop);
-
-    // Initial setup
-    setupHiddenElements();
 });
