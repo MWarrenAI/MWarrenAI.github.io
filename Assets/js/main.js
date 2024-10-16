@@ -94,27 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Intersection Observer for animations
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting && window.innerWidth > 768) {
-                entry.target.classList.add('show');
-            }
-        });
-    });
-
-    function setupHiddenElements() {
-        const hiddenElements = document.querySelectorAll('.hidden, .hidden-right, .hidden-bottom');
-        if (window.innerWidth > 768) {
-            hiddenElements.forEach((el) => observer.observe(el));
-        } else {
-            hiddenElements.forEach((el) => {
-                el.classList.add('show');
-                observer.unobserve(el);
-            });
-        }
-    }
-
     // Scroll to top functionality
     function handleScroll() {
         const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
