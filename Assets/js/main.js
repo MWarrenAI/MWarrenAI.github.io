@@ -127,3 +127,4 @@ document.addEventListener('DOMContentLoaded', function() {
             successModal.style.display = 'none';
         }
     });
+});
