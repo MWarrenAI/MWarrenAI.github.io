@@ -2,8 +2,8 @@
 	--bg-light: #333e4d;
 	--bg-dark: #2a3543;
 	--bg-darker: #212a36;
-	--color-primary: #8874ef;
-	--color-primary-dark: #772fed;
+	--color-primary: #6ec1e4;
+	--color-primary-dark: #54595f;
 	--color-text: #a2acbb;
 	--color-white: #fff;
 }
@@ -122,11 +122,19 @@ body {
 }
 
 
-.portfolio-section,
-.contact-section {
+.portfolio-section {
     padding-top: 100px;  
     scroll-margin-top: 80px;
 	min-height: 100vh;  
+}
+
+.contact-section {
+    padding-top: 100px;  
+    scroll-margin-top: 80px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;  
 }
 
 .home-section {
@@ -139,6 +147,30 @@ body {
 .section {
 	padding-top: 80px;
     padding-bottom: 80px;
+}
+
+.hidden, .hidden-right, .hidden-bottom {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+}
+
+.hidden {
+    transform: translateX(-100%);
+}
+
+.hidden-right {
+    transform: translateX(100%);
+}
+
+.hidden-bottom {
+    transform: translateY(100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) translateY(0);
 }
 
 .section__header {
@@ -648,7 +680,40 @@ textarea.form__input {
 
 .nav__link.contact-btn i {
 	margin-right: 5px;
-}	
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--first-color);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#scrollToTopBtn:hover {
+    background-color: var(--first-color-alt);
+}
+
+#scrollToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media(prefers-reduced-motion) {
+	.hidden {
+		transition: none;
+	}
+}
 
 @media screen and (max-width: 768px) {
 

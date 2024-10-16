@@ -21,27 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Smooth scrolling for all navigation links
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+    
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            
+    
             if (targetElement) {
-                const headerHeight = header.offsetHeight;
-                const yOffset = -headerHeight - 20; // Adjust this value to fine-tune the scroll position
-                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-                window.scrollTo({top: y, behavior: 'smooth'});
-
-                // Close the ham menu if it's open
-                if (offScreenMenu.classList.contains('active')) {
-                    hamMenu.classList.remove('active');
-                    offScreenMenu.classList.remove('active');
-                }
+                const headerOffset = 80; // Adjust this value to match your header height
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });
@@ -66,19 +61,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Special case for about link
     const aboutLink = document.querySelector('a[href="#about"]');
-    const aboutSection = document.getElementById('about');
-
-    if (aboutLink && aboutSection) {
+    if (aboutLink) {
         aboutLink.addEventListener('click', function(e) {
             e.preventDefault();
-            const headerHeight = header.offsetHeight;
-            const aboutOffset = aboutSection.offsetTop;
-            const extraOffset = 150; // Adjust this value as needed
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                const headerOffset = 300;
+                const elementPosition = aboutSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-            window.scrollTo({
-                top: aboutOffset - headerHeight - extraOffset,
-                behavior: 'smooth'
-            });
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
 
             // Close the ham menu if it's open
             if (offScreenMenu.classList.contains('active')) {
@@ -95,9 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Here you would normally send the form data to your server
-        // For this example, we'll just show the success modal
 
         // Show the modal
         successModal.style.display = 'block';
@@ -111,3 +104,39 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.reset();
     });
 });
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden, .hidden-right, .hidden-bottom');
+hiddenElements.forEach((el) => observer.observe(el));
+
+ // Scroll to top button functionality
+ const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+ const rootElement = document.documentElement;
+
+ function handleScroll() {
+     // Show button when page is scrolled down
+     const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+     if ((rootElement.scrollTop / scrollTotal) > 0.10) {
+         scrollToTopBtn.classList.add("show");
+     } else {
+         scrollToTopBtn.classList.remove("show");
+     }
+ }
+
+ function scrollToTop() {
+     // Scroll to top smoothly
+     rootElement.scrollTo({
+         top: 0,
+         behavior: "smooth"
+     });
+ }
+
+ scrollToTopBtn.addEventListener("click", scrollToTop);
+ document.addEventListener("scroll", handleScroll);
