@@ -718,19 +718,49 @@ textarea.form__input {
 @media screen and (max-width: 768px) {
 
 	.home__wrapper {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .home__content {
-        grid-column: 1;
-        grid-row: 2;
+        order: 2;
         text-align: center;
+        width: 100%;
+        padding: 0 20px;
     }
 
     .home__image-wrapper {
-        grid-column: 1;
-        grid-row: 1;
-        justify-self: center;
+        order: 1;
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .home__image {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .home__title {
+        font-size: 2rem;
+    }
+
+    .home__subtitle {
+        font-size: 1rem;
+    }
+
+    .home__description {
+        font-size: 0.9rem;
+    }
+
+    .btn--contact {
+        margin-top: 20px;
+    }
+
+    .social {
+        margin-top: 20px;
     }
 
     .about__wrapper {
