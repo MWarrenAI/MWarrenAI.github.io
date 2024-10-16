@@ -104,13 +104,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Special case for home link (scrolling to top)
     if (scrollToTopBtn) {
-        scrollToTopBtn.addEventListener("click", function() {
-            console.log("Scroll to top button clicked");
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+        scrollToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Close the ham menu if it's open
+            if (offScreenMenu.classList.contains('active')) {
+                hamMenu.classList.remove('active');
+                offScreenMenu.classList.remove('active');
+            }
         });
     }
 
