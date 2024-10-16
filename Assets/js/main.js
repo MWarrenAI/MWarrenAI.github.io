@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // DOM elements
     const hamMenu = document.querySelector(".ham-menu");
     const offScreenMenu = document.querySelector(".off-screen-menu");
     const header = document.querySelector('.l-header');
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    const rootElement = document.documentElement;
 
     // Ham menu functionality
     if (hamMenu && offScreenMenu) {
@@ -12,31 +15,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Header scroll effect
-    window.addEventListener('scroll', () => {
+    function handleHeaderScroll() {
         if (window.scrollY > 50) {
             header.classList.add('l-header--scroll');
         } else {
             header.classList.remove('l-header--scroll');
         }
-    });
+    }
 
-    // Smooth scrolling for all navigation links
+    // Smooth scrolling function
+    function smoothScroll(targetId, offset = 80) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    // Apply smooth scrolling to all navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-    
             const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-    
-            if (targetElement) {
-                const headerOffset = 80; // Adjust this value to match your header height
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-    
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
+            smoothScroll(targetId);
+            
+            // Close the ham menu if it's open
+            if (offScreenMenu.classList.contains('active')) {
+                hamMenu.classList.remove('active');
+                offScreenMenu.classList.remove('active');
             }
         });
     });
@@ -46,11 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (homeLink) {
         homeLink.addEventListener('click', function(e) {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
             // Close the ham menu if it's open
             if (offScreenMenu.classList.contains('active')) {
                 hamMenu.classList.remove('active');
@@ -64,18 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (aboutLink) {
         aboutLink.addEventListener('click', function(e) {
             e.preventDefault();
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-                const headerOffset = 300;
-                const elementPosition = aboutSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-
+            smoothScroll('about', 300);
+            
             // Close the ham menu if it's open
             if (offScreenMenu.classList.contains('active')) {
                 hamMenu.classList.remove('active');
@@ -83,60 +80,64 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
 
-document.addEventListener('DOMContentLoaded', function() {
+    // Contact form submission
     const contactForm = document.getElementById('contactForm');
     const successModal = document.getElementById('successModal');
 
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    if (contactForm && successModal) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            successModal.style.display = 'block';
+            setTimeout(() => { successModal.style.display = 'none'; }, 3000);
+            contactForm.reset();
+        });
+    }
 
-        // Show the modal
-        successModal.style.display = 'block';
-
-        // Hide the modal after 3 seconds
-        setTimeout(function() {
-            successModal.style.display = 'none';
-        }, 3000);
-
-        // Reset the form
-        contactForm.reset();
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting && window.innerWidth > 768) {
+                entry.target.classList.add('show');
+            }
+        });
     });
-});
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
+    function setupHiddenElements() {
+        const hiddenElements = document.querySelectorAll('.hidden, .hidden-right, .hidden-bottom');
+        if (window.innerWidth > 768) {
+            hiddenElements.forEach((el) => observer.observe(el));
+        } else {
+            hiddenElements.forEach((el) => {
+                el.classList.add('show');
+                observer.unobserve(el);
+            });
         }
-    });
+    }
+
+    // Scroll to top functionality
+    function handleScroll() {
+        const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+        if ((rootElement.scrollTop / scrollTotal) > 0.10) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    }
+
+    function scrollToTop() {
+        rootElement.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+    // Event listeners
+    window.addEventListener('scroll', handleHeaderScroll);
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', setupHiddenElements);
+    scrollToTopBtn.addEventListener("click", scrollToTop);
+
+    // Initial setup
+    setupHiddenElements();
 });
-
-const hiddenElements = document.querySelectorAll('.hidden, .hidden-right, .hidden-bottom');
-hiddenElements.forEach((el) => observer.observe(el));
-
- // Scroll to top button functionality
- const scrollToTopBtn = document.getElementById("scrollToTopBtn");
- const rootElement = document.documentElement;
-
- function handleScroll() {
-     // Show button when page is scrolled down
-     const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-     if ((rootElement.scrollTop / scrollTotal) > 0.10) {
-         scrollToTopBtn.classList.add("show");
-     } else {
-         scrollToTopBtn.classList.remove("show");
-     }
- }
-
- function scrollToTop() {
-     // Scroll to top smoothly
-     rootElement.scrollTo({
-         top: 0,
-         behavior: "smooth"
-     });
- }
-
- scrollToTopBtn.addEventListener("click", scrollToTop);
- document.addEventListener("scroll", handleScroll);

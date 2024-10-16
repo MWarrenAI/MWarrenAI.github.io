@@ -710,6 +710,17 @@ textarea.form__input {
     visibility: visible;
 }
 
+body {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+	
+.container {
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+}	
+
 @media(prefers-reduced-motion) {
 	.hidden {
 		transition: none;
@@ -719,29 +730,11 @@ textarea.form__input {
 @media screen and (max-width: 768px) {
 
 	.hidden, .hidden-right, .hidden-bottom {
-		opacity: 0;
-		filter: blur(5px);
-		transition: all 1s;
-	}
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) translateY(0);
+    }
 	
-	.hidden {
-		transform: translateX(-100%);
-	}
-	
-	.hidden-right {
-		transform: translateX(100%);
-	}
-	
-	.hidden-bottom {
-		transform: translateY(100%);
-	}
-	
-	.show {
-		opacity: 1;
-		filter: blur(0);
-		transform: translateX(0) translateY(0);
-	}
-
 	.home__wrapper {
         display: flex;
         flex-direction: column;
