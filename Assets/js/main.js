@@ -90,41 +90,24 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
+    const contactForm = document.getElementById('contactForm');
     const successModal = document.getElementById('successModal');
-    const closeModal = document.querySelector('.close');
 
-    form.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
+        
+        // Here you would normally send the form data to your server
+        // For this example, we'll just show the success modal
 
-        const formData = new FormData(form);
+        // Show the modal
+        successModal.style.display = 'block';
 
-        fetch('https://formspree.io/f/mvgoobrr', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                successModal.style.display = 'block';
-                form.reset();
-            } else {
-                throw new Error('Form submission failed');
-            }
-        }).catch(error => {
-            console.error('Error:', error);
-            alert('There was an error submitting the form. Please try again.');
-        });
-    });
-
-    closeModal.addEventListener('click', function() {
-        successModal.style.display = 'none';
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target == successModal) {
+        // Hide the modal after 3 seconds
+        setTimeout(function() {
             successModal.style.display = 'none';
-        }
+        }, 3000);
+
+        // Reset the form
+        contactForm.reset();
     });
 });
