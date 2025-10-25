@@ -77,7 +77,6 @@ button {
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
-	scroll-padding-top: 80px;
 }
 
 body {
