@@ -147,11 +147,12 @@ body {
 	justify-content: center;  
 }
 
+/* FIX: Reduced min-height to pull content up */
 .home-section {
     padding-top: 80px !important;
     display: flex;
-    align-items: left;
-    min-height: calc(100vh - 80px); 
+    align-items: center; /* FIX: Changed back to center to align content blocks */
+    min-height: 80vh; /* Reduced height to ensure content fits above scroll */
 }
 
 .section {
@@ -338,9 +339,11 @@ body {
     border-radius: 15px;
 }
 
+/* FIX: Explicitly ensure home content aligns left (it was inheriting some centering) */
 .home__content {
     grid-column: 1 / 2;  
     grid-row: 1;
+    text-align: left;
 }
 
 .home__subtitle {
@@ -371,7 +374,7 @@ body {
 
 .social {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: flex-start; /* FIX: Align social links left */
     width: 100%;
 }
 
@@ -429,9 +432,8 @@ body {
     color: var(--color-white);
 }
 
-/* FIX: Services/Tech Experience wrapper removed grid layout */
 .services__wrapper {
-	display: flex; /* Changed from grid */
+	display: flex; 
     flex-wrap: wrap;
     gap: 30px;
     justify-content: flex-start;
@@ -441,7 +443,6 @@ body {
     padding: 0 20px;
 }
 
-/* FIX: Hide old service cards */
 .services__card {
 	justify-self: center;
 	background-color: var(--bg-light);
@@ -455,7 +456,6 @@ body {
     display: none; 
 }
 
-/* New: Education Section Item Styling */
 .education__wrapper {
     max-width: 1200px;
     margin: 40px auto 0;
@@ -575,7 +575,6 @@ footer {
     align-self: flex-start;
 }
 
-/* FIX: Portfolio Grid Layout adjusted for 3 columns on large screens */
 .portfolio__wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -733,17 +732,8 @@ textarea.form__input {
     margin-top: 10px; 
 }
 
-/* FIX: Off-screen menu (mobile menu) is now correctly hidden by default */
 .off-screen-menu {
-    right: -450px;
-	visibility: hidden; 
-    pointer-events: none;
-}
-
-.off-screen-menu.active {
-    right: 0;
-    visibility: visible;
-    pointer-events: auto;
+    display: none; 
 }
 
 .nav__link.contact-btn {
@@ -802,7 +792,6 @@ body {
 	margin: 0 auto;
 }	
 
-/* FIX: Hide ham-menu elements on large screen */
 .ham-menu, .nav__toggle {
     display: none;
 }
@@ -915,17 +904,14 @@ body {
 
 @media screen and (max-width: 768px) {
 
-    /* FIX: Show ham-menu elements on small screen */
     .ham-menu, .nav__toggle {
         display: block;
     }
     
-    /* FIX: Hide desktop menu */
     .nav__menu {
         display: none; 
     }
 
-    /* FIX: Show mobile off-screen menu */
 	.off-screen-menu {
         display: flex;
         background-color:  rgb(34, 37, 49);
@@ -943,7 +929,6 @@ body {
         transition: .3s ease;
 	}
     
-    /* FIX: Ensure mobile nav list is displayed when off-screen menu is active */
     .off-screen-menu .nav__list {
         display: flex;
         flex-direction: column;
@@ -1025,7 +1010,6 @@ body {
 	.ham-menu span:nth-child(3) {
 		top: 75%;
 	}
-    /* FIX: Ensure Ham-menu active state transforms correctly on mobile */
 	.ham-menu.active span {
 		background-color: white;
 	}
