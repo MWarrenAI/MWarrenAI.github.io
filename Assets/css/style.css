@@ -508,7 +508,7 @@ footer {
 
 .portfolio__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1200px, 5fr));
+    grid-template-columns: repeat(auto-fit, minmax(1200px, 1fr));
     gap: 30px;
     justify-content: center;
     width: 100%;
@@ -522,7 +522,7 @@ footer {
 	box-shadow: var(--shadow);
     border-radius: 8px;
     padding: 20px;
-	max-width: 300px;
+	max-width:300px;
     justify-self: center;
 	display: flex;
 	flex-direction: column;
