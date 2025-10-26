@@ -735,7 +735,15 @@ textarea.form__input {
 
 /* FIX: Off-screen menu (mobile menu) is now correctly hidden by default */
 .off-screen-menu {
-    display: none; 
+    right: -450px;
+	visibility: hidden; 
+    pointer-events: none;
+}
+
+.off-screen-menu.active {
+    right: 0;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .nav__link.contact-btn {
