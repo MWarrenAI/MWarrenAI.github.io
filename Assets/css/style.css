@@ -841,7 +841,7 @@ body {
 
     .home__content {
         order: 2;
-        text-align: center;
+        text-align: justify;
         width: 100%;
         padding: 0 20px;
     }
