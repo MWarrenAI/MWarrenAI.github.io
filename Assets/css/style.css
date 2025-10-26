@@ -347,8 +347,8 @@ body {
 }
 
 .home__description {
-	margin-top: 12px;
-	font-size: 12px;
+	margin-top: 20px;
+	font-size: 18px;
 	line-height: 1.6;
 }
 
@@ -497,7 +497,7 @@ footer {
 }
 
 .about__description {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -556,7 +556,7 @@ footer {
 }
 
 .portfolio__description {
-    font-size: 24px;
+    font-size: 18px;
     color: var(--color-text);
     margin: 0 0 20px;
     line-height: 1.6;
@@ -779,7 +779,7 @@ body {
     }
 
     .portfolio__description {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .contact__wrapper {
