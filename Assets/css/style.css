@@ -151,8 +151,8 @@ body {
 .home-section {
     padding-top: 80px !important;
     display: flex;
-    align-items: center; /* FIX: Changed back to center to align content blocks */
-    min-height: 80vh; /* Reduced height to ensure content fits above scroll */
+    align-items: center; 
+    min-height: 80vh; 
 }
 
 .section {
@@ -374,7 +374,7 @@ body {
 
 .social {
 	display: flex;
-	justify-content: flex-start; /* FIX: Align social links left */
+	justify-content: flex-start; 
     width: 100%;
 }
 
@@ -732,6 +732,7 @@ textarea.form__input {
     margin-top: 10px; 
 }
 
+/* FIX: Off-screen menu (mobile menu) is now correctly hidden by default */
 .off-screen-menu {
     display: none; 
 }
@@ -792,6 +793,7 @@ body {
 	margin: 0 auto;
 }	
 
+/* FIX: Hide ham-menu elements on large screen */
 .ham-menu, .nav__toggle {
     display: none;
 }
@@ -804,8 +806,9 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+    /* FIX: Reduce default body font size for better fit on small screens */
     body {
-        font-size: 20px;
+        font-size: 18px; 
     }
     
     .portfolio__image {
@@ -832,8 +835,10 @@ body {
         font-size: 0.9rem;
     }
 
+    /* FIX: Reduce home description font size to prevent overflow */
     .home__description {
-        font-size: 0.8rem;
+        font-size: 16px;
+        line-height: 1.4;
     }
 
     .btn {
@@ -904,14 +909,17 @@ body {
 
 @media screen and (max-width: 768px) {
 
+    /* FIX: Show ham-menu elements on small screen */
     .ham-menu, .nav__toggle {
         display: block;
     }
     
+    /* FIX: Hide desktop menu */
     .nav__menu {
         display: none; 
     }
 
+	/* FIX: Show mobile off-screen menu */
 	.off-screen-menu {
         display: flex;
         background-color:  rgb(34, 37, 49);
@@ -929,12 +937,53 @@ body {
         transition: .3s ease;
 	}
     
+    /* FIX: Ensure mobile nav list is displayed when off-screen menu is active */
     .off-screen-menu .nav__list {
         display: flex;
         flex-direction: column;
         row-gap: 30px;
     }
+    
+    /* Mobile-specific hero section adjustments */
+	.home__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding-top: 50px; /* FIX: Added padding top to push content down from header */
+    }
 
+    .home__content {
+        order: 2;
+        text-align: center; /* FIX: Center text */
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .home__image-wrapper {
+        order: 1;
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 150px; /* FIX: Reduced max image size to 150px for mobile */
+        justify-self: center;
+    }
+
+    .home__image {
+        width: 100%; 
+        height: auto; 
+        border-radius: 50%;
+    }
+
+    .home__description {
+        font-size: 16px; /* FIX: Reduced font size for mobile text */
+        line-height: 1.4;
+    }
+    
+    .social {
+        justify-content: center; /* FIX: Center social icons */
+    }
+    
+    /* The rest of the media query styles */
+    /* ... (omitted for brevity, assume they are the same as the last submission) */
 	.off-screen-menu.active {
 		right: 0;
 	}
@@ -1042,7 +1091,7 @@ body {
         order: 1;
         margin-bottom: 30px;
         width: 100%;
-        max-width: 250px; 
+        max-width: 150px; /* The fix */
         justify-self: center;
     }
 
