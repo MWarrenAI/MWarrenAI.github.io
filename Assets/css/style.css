@@ -106,7 +106,7 @@ body {
 
 .about-section
 {
-    padding-top: 20px;
+    padding-top: 40px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -115,20 +115,20 @@ body {
 
 .services-section
 {
-    padding-top: 20px !important; 
+    padding-top: 40px !important; 
     scroll-margin-top: 80px !important; 
 	min-height: 100vh;
 }
 
 
 .portfolio-section {
-    padding-top: 20px;  
+    padding-top: 40px;  
     scroll-margin-top: 80px;
 	min-height: 100vh;  
 }
 
 .contact-section {
-    padding-top: 20px;  
+    padding-top: 40px;  
     scroll-margin-top: 20px;
 	min-height: 100vh;
 	display: flex;
@@ -137,14 +137,14 @@ body {
 }
 
 .home-section {
-    padding-top: 40px !important;
+    padding-top: 60px !important;
     min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
 .section {
-	padding-top: 20px;
+	padding-top: 40px;
     padding-bottom: 80px;
 }
 
@@ -174,7 +174,7 @@ body {
 
 .section__header {
 	text-align: left;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	width: 100%;
 	max-width: 1200px;
 	padding: 0 20px;
