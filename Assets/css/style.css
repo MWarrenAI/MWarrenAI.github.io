@@ -347,7 +347,7 @@ body {
 }
 
 .home__description {
-	margin-top: 20px;
+	margin-top: 12px;
 	font-size: 12px;
 	line-height: 1.6;
 }
@@ -388,7 +388,7 @@ body {
 
 .services__wrapper {
 	display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 30px;
     justify-content: center;
     width: 100%;
@@ -508,7 +508,7 @@ footer {
 
 .portfolio__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap: 30px;
     justify-content: center;
     width: 100%;
