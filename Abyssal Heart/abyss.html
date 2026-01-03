@@ -3,33 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abyssal Heart | Technical Case Study</title>
+    <title>Abyssal Heart | Project Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="Assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <header class="l-header">
-        <nav class="nav container">
-            <a href="index.html" class="home__name">MARK WARREN</a>
-            <ul class="nav__list">
-                <li class="nav__item"><a href="index.html#portfolio">Portfolio</a></li>
-                <li class="nav__item"><a href="index.html#experience">Experience</a></li>
-                <li class="nav__item"><a href="Assets/Resume/MWarrenResume.pdf" class="btn btn--primary">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <main class="content-wrapper">
         
         <section class="home-section container">
             <div class="home__wrapper">
                 <div class="home__content">
-                    <h2 class="home__subtitle">PROJECT CASE STUDY</h2>
                     <h1 class="home__title">Abyssal Heart</h1>
                     <p class="home__description">
-                        <strong>Role:</strong> Lead Programmer & Project Coordinator<br>
-                        <strong>Tech:</strong> C#, Unity, Git, Shader Graph<br>
+                        <strong>Role:</strong> Programmer and Project Coordinator<br>
+                        <strong>Tech:</strong> C#, Unity, GitHub<br>
                         <strong>Award:</strong> Best Art - GDS Welcome Jam 2025
                     </p>
                     <div class="social">
@@ -37,7 +30,7 @@
                     </div>
                 </div>
                 <div class="home__image-wrapper">
-                    <img src="Assets/images/Abyss_preview_gif.gif" alt="Abyssal Heart Gameplay" class="home__image">
+                    <img src="../Assets/images/Abyss_preview_gif.gif" alt="Abyssal Heart Gameplay" class="home__image">
                 </div>
             </div>
         </section>
@@ -46,25 +39,29 @@
             <div class="section__header">
                 <h2 class="section__title">The Technical Challenge</h2>
                 <p class="about__description">
-                    The core challenge was implementing a <strong>Global State-Switching Mechanic</strong> within a 24-hour sprint. 
-                    I engineered an event-driven system where a single "Pulse" triggers state changes across all environmental 
-                    "Light Listeners," allowing for complex puzzle logic without heavy per-frame overhead.
+                    The core challenge was implementing a <strong>Global State-Switching Mechanic</strong> within 24-hours. 
+                    The team engineered an event-driven system where the light switch (bioluminescence) state changes across all environmental 
+                    "Light Listeners," allowing for complex puzzle logic. This would then allow the character to navigate around obstacles e.g. walls
+					and other environmental changes effected by the light surrounding the character. The sanity mechanic would also trigger other objects which
+					may effect the environment around the character such as friendly npcs suddenly becomming agressive. Light is therefore a mechanic that both
+					influences the state of the environment and creates challenges for the player.
                 </p>
             </div>
             
             <div class="portfolio__wrapper">
                 <div class="education__item">
-                    <h3 class="education__degree">State-Driven Architecture</h3>
+                    <h3 class="education__degree">Project Synopsis</h3>
                     <p class="education__description">
-                        Used a centralized <code>C# Manager</code> to broadcast state changes. This decoupled the 
-                        light logic from individual NPC scripts, ensuring 60FPS even with multiple active elements.
+                        After being exiled by the Queen, a lost knight finds themselves on a quest to retrieve the artifact that
+						caused this spiral to begin with. Using bioluminescence, switch between the light and the dark to solve puzzles, 
+						interact with NPCS, and reach the deepest trenches of the ocean.
                     </p>
                 </div>
                 <div class="education__item">
-                    <h3 class="education__degree">Pipeline Management</h3>
+                    <h3 class="education__degree">Ef the Firefly</h3>
                     <p class="education__description">
-                        Coordinated 11 unique character assets. When repository naming conflicts arose mid-jam, 
-                        I enforced a new directory standard to ensure the final build remained stable.
+                        Within this game, we play as a character named Firefly (Ef), who is based on a Firefly Squid. Every character is based on
+						different sea creatures, mixing humanoid elements with those of said creatures.
                     </p>
                 </div>
             </div>
