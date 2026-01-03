@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyssal Heart | Technical Case Study</title>
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="l-header">
+        <nav class="nav container">
+            <a href="index.html" class="home__name">MARK WARREN</a>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html#portfolio">Portfolio</a></li>
+                <li class="nav__item"><a href="index.html#experience">Experience</a></li>
+                <li class="nav__item"><a href="Assets/Resume/MWarrenResume.pdf" class="btn btn--primary">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        
+        <section class="home-section container">
+            <div class="home__wrapper">
+                <div class="home__content">
+                    <h2 class="home__subtitle">PROJECT CASE STUDY</h2>
+                    <h1 class="home__title">Abyssal Heart</h1>
+                    <p class="home__description">
+                        <strong>Role:</strong> Lead Programmer & Project Coordinator<br>
+                        <strong>Tech:</strong> C#, Unity, Git, Shader Graph<br>
+                        <strong>Award:</strong> Best Art - GDS Welcome Jam 2025
+                    </p>
+                    <div class="social">
+                        <a href="https://yamarugii.itch.io/abyssal-heart" class="btn btn--primary">Play on Itch.io</a>
+                    </div>
+                </div>
+                <div class="home__image-wrapper">
+                    <img src="Assets/images/Abyss_preview_gif.gif" alt="Abyssal Heart Gameplay" class="home__image">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section container">
+            <div class="section__header">
+                <h2 class="section__title">The Technical Challenge</h2>
+                <p class="about__description">
+                    The core challenge was implementing a <strong>Global State-Switching Mechanic</strong> within a 24-hour sprint. 
+                    I engineered an event-driven system where a single "Pulse" triggers state changes across all environmental 
+                    "Light Listeners," allowing for complex puzzle logic without heavy per-frame overhead.
+                </p>
+            </div>
+            
+            <div class="portfolio__wrapper">
+                <div class="education__item">
+                    <h3 class="education__degree">State-Driven Architecture</h3>
+                    <p class="education__description">
+                        Used a centralized <code>C# Manager</code> to broadcast state changes. This decoupled the 
+                        light logic from individual NPC scripts, ensuring 60FPS even with multiple active elements.
+                    </p>
+                </div>
+                <div class="education__item">
+                    <h3 class="education__degree">Pipeline Management</h3>
+                    <p class="education__description">
+                        Coordinated 11 unique character assets. When repository naming conflicts arose mid-jam, 
+                        I enforced a new directory standard to ensure the final build remained stable.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-experience-section container">
+            <div class="section__header">
+                <h2 class="section__title">Technical Post-Mortem</h2>
+            </div>
+            <div class="skills-list">
+                <span class="skills-list__item">What Worked: Rapid Event-Driven Prototyping</span>
+                <span class="skills-list__item">Challenge: Naming Convention Conflicts</span>
+                <span class="skills-list__item">Solution: Automated Directory Cleanup</span>
+                <span class="skills-list__item">Future: Custom C++ Rendering Passes</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="Ender">
+        <div class="container foottext">
+            <p>2026 Mark Warren | Systems-Focused Developer</p>
+            <a href="index.html" class="nav__item">← Back to Portfolio</a>
+        </div>
+    </footer>
+
+</body>
+</html>
