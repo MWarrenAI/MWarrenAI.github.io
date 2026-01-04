@@ -71,13 +71,6 @@ section {
     align-items: center;
 }
 
-.home__wrapper {
-    display: grid;
-    grid-template-columns: 1.4fr 0.6fr; /* Text gets more space than the image */
-    gap: 40px;
-    align-items: start;
-}
-
 .home__stats {
     margin-bottom: 2rem;
     font-size: 0.95rem;
@@ -85,6 +78,35 @@ section {
     padding-left: 15px;
 }
 
+.home__wrapper {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr; 
+    gap: 40px;
+    align-items: start;
+}
+
+.home__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.home__image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-glow);
+    border: 1px solid var(--border-glow);
+    transition: var(--transition-smooth);
+}
+
+.home__button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+/* Refined Description */
 .home__description {
     text-align: justify;
     text-justify: inter-word;
@@ -95,16 +117,12 @@ section {
     color: var(--text-dim);
 }
 
-.home__image {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: var(--shadow-glow);
-}
-
 @media screen and (max-width: 992px) {
     .home__wrapper {
         grid-template-columns: 1fr;
+    }
+    .home__sidebar {
+        order: -1; /* Puts visuals above text on mobile for better UX */
     }
     .home__description {
         column-count: 1; 
