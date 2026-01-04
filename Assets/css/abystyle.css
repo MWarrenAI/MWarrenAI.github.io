@@ -65,7 +65,6 @@ section {
     width: 100%;
 }
 
-/* Hero Section */
 .home-section {
     min-height: 90vh;
     display: flex;
@@ -76,7 +75,18 @@ section {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     gap: 50px;
-    align-items: center;
+    align-items: start; 
+    margin-top: 2rem;
+}
+
+.home__description {
+    text-align: justify;
+    hyphens: auto; 
+    max-width: 650px; 
+    margin-bottom: 2rem;
+    color: var(--text-dim);
+    font-size: 1.05rem;
+    line-height: 1.6;
 }
 
 .home__title {
