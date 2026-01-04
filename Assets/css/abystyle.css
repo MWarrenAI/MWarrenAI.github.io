@@ -1,0 +1,197 @@
+:root {
+    --bg-void: #02050a;
+    --bg-abyss: radial-gradient(circle at 50% 40%, #0a1422 0%, #02050a 100%);
+    --bg-card: rgba(13, 25, 41, 0.7);
+    
+    --glow-cyan: #6ec1e4;
+    --glow-purple: #9d50bb;
+    --text-dim: #8ba1b4;
+    --text-bright: #e0f2fe;
+    
+    --border-glow: rgba(110, 193, 228, 0.2);
+    --shadow-glow: 0 0 20px rgba(110, 193, 228, 0.15);
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background: var(--bg-void);
+    background-image: var(--bg-abyss);
+    background-attachment: fixed;
+    color: var(--text-dim);
+    margin: 0;
+    line-height: 1.8;
+    font-size: 18px; 
+}
+
+h1, h2, h3 {
+    color: var(--text-bright);
+    text-shadow: 0 0 15px rgba(110, 193, 228, 0.4);
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+}
+
+strong {
+    color: var(--glow-cyan);
+    text-shadow: 0 0 5px rgba(110, 193, 228, 0.3);
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    padding: 80px 0;
+    width: 100%;
+}
+
+/* Hero Section */
+.home-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.home__wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.home__title {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(to bottom, #fff, var(--glow-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.home__image {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--border-glow);
+    box-shadow: var(--shadow-glow);
+    transition: var(--transition-smooth);
+    filter: brightness(0.9);
+}
+
+.home__image:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 0 30px rgba(110, 193, 228, 0.4);
+    transform: scale(1.02);
+}
+
+.education__item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glow);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    transition: var(--transition-smooth);
+}
+
+.education__item:hover {
+    border-color: var(--glow-cyan);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-5px);
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.skills-list__item {
+    display: inline-block;
+    color: var(--glow-cyan);
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--glow-cyan);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.btn--primary {
+    background: transparent;
+    border: 2px solid var(--glow-cyan);
+    color: var(--glow-cyan);
+    padding: 15px 40px;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: inset 0 0 15px rgba(110, 193, 228, 0.1), 0 0 15px rgba(110, 193, 228, 0.1);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn--primary:hover {
+    background: var(--glow-cyan);
+    color: var(--bg-void);
+    box-shadow: 0 0 35px var(--glow-cyan);
+}
+
+footer {
+    padding: 60px 0;
+    border-top: 1px solid var(--border-glow);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.nav__item {
+    color: var(--glow-cyan);
+    font-weight: 600;
+}
+
+.nav__item:hover {
+    text-shadow: 0 0 10px var(--glow-cyan);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .home__wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .home__title {
+        font-size: 2.5rem;
+    }
+    
+    .home__image-wrapper {
+        order: -1;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .home-section {
+        padding-top: 120px;
+    }
+}
+
+@keyframes drift {
+    from { transform: translateY(0px) translateX(0px); }
+    to { transform: translateY(-100px) translateX(20px); }
+}
