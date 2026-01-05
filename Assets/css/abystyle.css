@@ -115,6 +115,9 @@ section {
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--text-dim);
+	hyphens: auto;           
+    word-spacing: -0.02em;   
+    orphans: 2;
 }
 
 @media screen and (max-width: 992px) {
